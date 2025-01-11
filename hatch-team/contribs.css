@@ -17,9 +17,11 @@ body, html {
   padding: 0;
   background-color: var(--navLight);
 }
+
 input {
   outline: none;
 }
+
 #main {
   background-color: var(--websiteBack);
   width: 80%;
@@ -29,19 +31,23 @@ input {
   padding-bottom: 10px;
   flex-direction: column;
 }
+
 .spacer {
   width: 100%;
   height: 15px;
 }
+
 .navitem a {
 display: block;
 }
+
 #content {
   background-color: var(--innerBlock);
   padding: 10px;
   border-radius: 10px;
   color: var(--univText);
 }
+
 #banner {
   background-color: var(--websiteBack);
   padding: 10px;
@@ -49,18 +55,20 @@ display: block;
   font-size: 35px;
   text-align: center;
 }
+
 .sectiontitle {
   font-size: 27.5px;
   text-align: center;
 }
+
 .container {
-  width: 75%;
+  /* Removed width property */
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  display: flex;
   gap: 20px;
 }
+
 .person {
   display: block;
   background-color: var(--websiteBack);
@@ -69,19 +77,23 @@ display: block;
   text-decoration: none;
   width: 160px;
 }
+
 .person:hover .username {
   text-decoration: underline;
 }
+
 .person > .pfp {
   border-radius: 10px;
   width: 100%;
   aspect-ratio: 1 / 1;
 }
+
 .person > .username {
   color: var(--navLight);
   font-size: 22.5px;
   text-align: center;
 }
+
 .role {
   color: var(--univText);
   font-size: 15px;
