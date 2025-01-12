@@ -1,13 +1,5 @@
-  #main {
-    background-color: var(--websiteBack);
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-direction: column;
-  }
-  #content {
+
+#content {
     background-color: var(--innerBlock);
     border-radius: 10px;
     padding: 10px;

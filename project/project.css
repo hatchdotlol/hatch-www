@@ -1,14 +1,5 @@
-#main {
-  color: white;
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--websiteBack);
-}
+
+
 .area {
   width: 100%;
   display: flex;

@@ -42,3 +42,14 @@ a {
   a:hover {
     color: var(--searchBar);
   }
+  #main {
+    min-height: calc(100vh - 185px);
+    background-color: var(--websiteBack);
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    color: var(--univText);
+  }

@@ -8,21 +8,6 @@
 #bio a:hover, #recent-activity a:hover, #connections-list a:hover {
   color: var(--searchBar);
 }
-input {
-  outline: none;
-}
-#main {
-  background-color: var(--websiteBack);
-  color: var(--univText);
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  flex-direction: column;
-  display: flex;
-  gap: 10px;
-}
 #content {
   display: flex;
   gap: 10px;
