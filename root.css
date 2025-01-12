@@ -32,7 +32,7 @@ html {
   font-family: "Calibri", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--navLight);
+  background-color: var(--websiteBack);
 }
 a {
     color: var(--lightOrange);
