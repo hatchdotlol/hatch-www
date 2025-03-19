@@ -35,7 +35,9 @@ submit.addEventListener("click", function () {
   const formData = new FormData();
   formData.append("title", title);
   formData.append("description", description);
-  formData.append("file", fileBlob, file.name);
+  if (file) {
+    formData.append("file", fileBlob, file.name);
+  }
 
   submit.disabled = true;
   fetch(`https://api.hatch.lol/projects/${id}/update`, {

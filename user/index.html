@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="user.css" />
         <link rel="stylesheet" href="/navbar/navbar.css" />
         <link rel="stylesheet" href="/footer/footer.css" />
+        <link rel="stylesheet" href="/admin/userpanel.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -60,21 +61,33 @@
                             </div>
                             <div id="stats">
                                 <div class="stat">
-                                    <p class="stat-number" id="followers-count">
-                                        
+                                    <p
+                                        class="stat-number"
+                                        id="followers-count"
+                                    ></p>
+                                    <p class="stat-name">
+                                        <a
+                                            href="/user/followers/"
+                                            id="followers-link"
+                                            >Followers</a
+                                        >
                                     </p>
-                                    <p class="stat-name"><a href="/user/followers/" id="followers-link">Followers</a></p>
                                 </div>
                                 <div class="stat">
-                                    <p class="stat-number" id="following-count">
-                                        
+                                    <p
+                                        class="stat-number"
+                                        id="following-count"
+                                    ></p>
+                                    <p class="stat-name">
+                                        <a
+                                            href="/user/following/"
+                                            id="following-link"
+                                            >Following</a
+                                        >
                                     </p>
-                                    <p class="stat-name"><a href="/user/following/" id="following-link">Following</a></p>
                                 </div>
                                 <div class="stat">
-                                    <p class="stat-number" id="posts-count">
-                                        
-                                    </p>
+                                    <p class="stat-number" id="posts-count"></p>
                                     <p class="stat-name">Projects</p>
                                 </div>
                             </div>
@@ -87,86 +100,48 @@
                         </div>
                         <div id="user-info-middle">
                             <div id="bio-section">
-                                <p id="bio">
-                                    
-                                </p>
+                                <p id="bio"></p>
                             </div>
                             <div id="activity">
                                 <h2>Recent Activity</h2>
                                 <ul id="recent-activity">
                                     <li>
-                                        
                                         <a href="#"></a>
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
                                         <a href="#"></a>
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                       
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                       
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                       
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                      
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                     <li>
-                                        
-                                        <span class="activity-time"
-                                            ></span
-                                        >
+                                        <span class="activity-time"></span>
                                     </li>
                                 </ul>
                             </div>
@@ -429,11 +404,13 @@
                     </div>
                 </div>
             </div>
+            <div id="admin" style="display: none"></div>
         </div>
         <div id="footercontainer"></div>
         <script src="/navbar/navbar.js"></script>
         <script src="/footer/footer.js"></script>
         <script src="data.js"></script>
         <script src="/text-modify.js"></script>
+        <script src="/admin/userpanel.js"></script>
     </body>
 </html>

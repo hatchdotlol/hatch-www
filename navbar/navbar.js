@@ -135,12 +135,12 @@ if (localStorage.getItem("token") !== null) {
                 }
                 document.getElementById(
                     "pfpnav"
-                ).src = `https://api.hatch.lol${json.profilePicture}`;
+                ).src = `https://api.hatch.lol${json.profilePicture}?size=30`;
                 document.getElementById("usernamenav").innerText =
                     json.displayName;
                 document.getElementsByClassName(
                     "nav-your-profile"
-                )[0].href = `/user/?u=${json.name}`;
+                )[0].href = `https://dev.hatch.lol/user/?u=${json.name}`;
             });
         }
     });

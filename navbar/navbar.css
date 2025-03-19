@@ -30,6 +30,8 @@
     min-width: 100px;
     justify-content: space-between;
     gap: 10px;
+    z-index: 1;
+    position: relative;
     /* below makes it so the dropdown text cannot accidentally be highlighted */
     -webkit-user-select: none;
     -ms-user-select: none;

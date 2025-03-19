@@ -43,7 +43,7 @@ fetch(`https://api.hatch.lol/users/${username}`).then((res) => {
       document.querySelector("#displayname").innerText = data.displayName;
       document.querySelector("#username").innerText = `@${data.name}`;
       document.querySelector("#pfp").src =
-        `https://api.hatch.lol${data.profilePicture}`;
+        `https://api.hatch.lol${data.profilePicture}?size=70`;
       document.querySelector("#followers-count").innerText = data.followerCount;
       document.querySelector("#status").innerHTML = data.hatchTeam
         ? '<i class="fa-solid fa-shield-halved"></i> Hatch Team'
@@ -64,7 +64,7 @@ fetch(`https://api.hatch.lol/users/${username}/followers`).then((res) => {
         followers_list.innerHTML = `
         ${followers_list.innerHTML}
         <a class="small-user" href="/user/?u=${user.name}">
-          <img src="https://api.hatch.lol${user.profilePicture}">
+          <img src="https://api.hatch.lol${user.profilePicture}?size=70">
           <span>${user.displayName}</span>
         </a>`;
       });

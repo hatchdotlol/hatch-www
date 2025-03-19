@@ -89,60 +89,46 @@
                             <div class="interactions">
                                 <div class="rating">
                                     <div class="upvote">
-                                        <img
-                                            src="https://rdr.lol/u/dNVXOI.png"
-                                            class="interaction-button"
-                                            alt="Upvote button"
-                                        />
+                                        <i class="fa-solid fa-up-long"></i>
                                         <p
                                             id="upvote-count"
                                             class="loading-skeleton"
                                         >
-                                            47
+                                            ..
                                         </p>
                                     </div>
                                     <div class="downvote">
-                                        <img
-                                            src="https://rdr.lol/u/6KIJeR.png"
-                                            class="interaction-button"
-                                            alt="Downvote button"
-                                        />
+                                        <i class="fa-solid fa-down-long"></i>
                                         <p
                                             id="downvote-count"
                                             class="loading-skeleton"
                                         >
-                                            2
+                                            ..
                                         </p>
                                     </div>
                                     <p
                                         id="vote-percent"
                                         class="loading-skeleton"
                                     >
-                                        (96%)
+                                        (..%)
                                     </p>
                                 </div>
                                 <div class="actions">
                                     <a id="report" class="report"
-                                        ><img
-                                            src="https://rdr.lol/u/JRHxiZ.png"
-                                            alt="Report"
-                                        />
+                                        ><i class="fa-solid fa-flag"></i>
                                         Report</a
                                     >
                                     <a id="download" class="download"
-                                        ><img
-                                            src="https://rdr.lol/u/DMgwS6.png"
-                                            alt="Download"
-                                        />
+                                        ><i
+                                            class="fa-solid fa-cloud-arrow-down"
+                                        ></i>
                                         Download</a
                                     >
                                     <a id="share" class="share"
-                                        ><img
-                                            src="https://rdr.lol/u/8Vf9jC.png"
-                                            alt="Share"
-                                        />
+                                        ><i class="fa-solid fa-paper-plane"></i>
                                         Share</a
-                                    ><dialog id="share-dialog">
+                                    >
+                                    <dialog id="share-dialog">
                                         <h3>Link</h3>
                                         <span id="share-url"></span>
                                         <h3>Embed</h3>
@@ -157,7 +143,7 @@
                         <h2>Comments</h2>
                         <div class="comment-input">
                             <img
-                                src="https://rdr.lol/u/KRV1KZ.png"
+                                src=""
                                 alt="Your profile picture"
                                 id="project-comment-form-pfp"
                             />
@@ -174,7 +160,9 @@
                                 <input type="submit" value="Submit" />
                             </form>
                         </div>
-                        <div id="comments"><span id="no-comments-text">No comments yet.</span></div>
+                        <div id="comments">
+                            <span id="no-comments-text">No comments yet.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="about-info">
@@ -183,7 +171,13 @@
                             >7 December 2024</b
                         >
                     </div>
-                    <a class="button" id="project-edit-button">Edit project</a> <a class="button" id="project-see-inside-button" title="View and edit the code of this project in TurboWarp.">See inside</a>
+                    <a class="button" id="project-edit-button">Edit project</a>
+                    <a
+                        class="button"
+                        id="project-see-inside-button"
+                        title="View and edit the code of this project in TurboWarp."
+                        >See inside</a
+                    >
                     <div class="description">
                         <h2>Description</h2>
                         <p id="project-description" class="loading-skeleton">
@@ -205,7 +199,7 @@
                         opinions, views, or standards of the Hatch platform or
                         Hatch team.<br />
                         All projects on Hatch must follow the
-                        <a href="/guidelines">Hatch Platform Guidelines</a>.
+                        <a href="/guidelines">Hatch Platform Guidelines</a>, and are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
                     </p>
                     <div class="tags">
                         <p>
@@ -215,65 +209,6 @@
                                 <a href="/search?tag=game">#Game</a></span
                             >
                         </p>
-                    </div>
-                </div>
-                <div class="galleries">
-                    <h2>Galleries</h2>
-                    <div class="galleries-scroll" id="project-galleries">
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
-                        <div class="gallery">
-                            <a href="/galleries">
-                                <img
-                                    src="https://rdr.lol/u/s5m1y4.png"
-                                    alt="Gallery thumbnail"
-                                />
-                                <p>Cool Hatch Projects</p>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

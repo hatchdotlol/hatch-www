@@ -30,11 +30,14 @@ document.querySelector("#submit").addEventListener("click", function () {
       method: "POST",
       body: formData,
       headers: {
-        // "Content-Type": "multipart/form-data",
         Token: localStorage.getItem("token"),
       },
     });
   }
+
+  let bannerImage = document.getElementById("banner").value;
+  bannerImage = bannerImage === "" ? null : bannerImage;
+
   fetch("https://api.hatch.lol/users", {
     method: "POST",
     headers: {
@@ -45,8 +48,15 @@ document.querySelector("#submit").addEventListener("click", function () {
       display_name: document.getElementById("display").value,
       bio: document.getElementById("bio").value,
       country: document.getElementById("location").value,
-      banner_image: document.getElementById("banner").value,
+      banner_image: bannerImage,
       theme: document.getElementById("theme").value
     })
+  }).then(async (e) => {
+    if (e.ok) {
+      alert("Profile info saved");
+    } else {
+      let error = (await e.json())["error"];
+      alert(`Could not update profile. ${error}`);
+    }
   });
 });

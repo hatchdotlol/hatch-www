@@ -95,7 +95,7 @@ fetch(`https://api.hatch.lol/users/${username}`).then((res) => {
       document.querySelector("#username").innerText = `@${data.name}`;
       document.querySelector("#bio").innerHTML = data.bio ? text_modify(data.bio) : "";
       document.querySelector("#pfp").src =
-        `https://api.hatch.lol${data.profilePicture}`;
+        `https://api.hatch.lol${data.profilePicture}?size=70`;
       document.querySelector("#banner").src = data.bannerImage;
       document.querySelector("#followers-count").innerText = data.followerCount;
       document.querySelector("#followers-link").href = `/user/followers/?u=${data.name}`;
@@ -194,7 +194,7 @@ fetch(`https://api.hatch.lol/users/${username}/projects`).then((res) => {
         document.querySelector("#shared-projects-row").innerHTML = `
                     <div class="project">
                         <div class="project-top">
-                            <a href="/project/?id=${project.id}"><img src="https://api.hatch.lol${project.thumbnail}" alt="Project thumbnail" class="project-thumbnail"></a>
+                            <a href="/project/?id=${project.id}"><img src="https://api.hatch.lol${project.thumbnail}?size=140" alt="Project thumbnail" class="project-thumbnail"></a>
                             <p class="project-stats">
                                 <i class="fa-solid fa-square-caret-up"></i>&ensp;?<br>
                                 <i class="fa-solid fa-eye"></i>&ensp;?<br>

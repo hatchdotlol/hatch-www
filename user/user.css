@@ -1,307 +1,306 @@
 #bio a,
 #recent-activity a,
 #connections-list a {
-  color: var(--lightOrange);
-  font-weight: bold;
-  transition: ease 0.3s;
-  text-decoration: none;
+    color: var(--lightOrange);
+    font-weight: bold;
+    transition: ease 0.3s;
+    text-decoration: none;
 }
 
 #bio a:hover,
 #recent-activity a:hover,
 #connections-list a:hover {
-  filter: brightness(80%);
+    filter: brightness(80%);
 }
 #content {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 h1,
 h2,
 h3,
 h4,
 p {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 .spacer {
-  width: 100%;
-  height: 15px;
-  background-color: var(--websiteBack);
+    width: 100%;
+    height: 15px;
+    background-color: rgb(0, 0, 0, 0);
 }
 #banner {
-  background-color: var(--navLight);
-  width: 100%;
-  height: 180px;
-  align-items: center;
-  display: flex;
-  overflow: hidden;
-  border-radius: 10px 10px 0px 0px;
+    background-color: var(--navLight);
+    width: 100%;
+    height: 180px;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
 }
 #banner img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
 }
 #pfp {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
-  border-radius: 10px;
+    height: 64px;
+    width: 64px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 #user-info-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 #user-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: var(--innerBlock);
-  padding: 10px;
-  border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--innerBlock);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
 #names {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 #stats {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 10px;
 }
 .stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #follow-button {
-  font-weight: bold;
-  color: black;
-  padding: 5px;
-  width: 10%;
-  border-radius: 8px;
-  background-color: var(--lightOrange);
-  border: 5px white solid;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-  margin-left: auto;
-  display: flex;
-  justify-content: center;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    width: 10%;
+    border-radius: 8px;
+    background-color: var(--lightOrange);
+    border: 5px white solid;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
 }
 #follow-button:hover {
-  filter: brightness(80%);
-  cursor: pointer;
-  border: 5px solid var(--lightOrange);
+    filter: brightness(80%);
+    cursor: pointer;
+    border: 5px solid var(--lightOrange);
 }
 #names-top,
 #names-bottom {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .stat-number {
-  font-size: 1.3em;
-  font-weight: bold;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 #status {
-  color: #c4c4c4;
+    color: #c4c4c4;
 }
 #followstatus {
-  font-size: 0.8em;
-  background-color: var(--innerBlock2);
-  padding: 5px;
-  border-radius: 10px;
+    font-size: 0.8em;
+    background-color: var(--innerBlock2);
+    padding: 5px;
+    border-radius: 10px;
 }
 #user-info-middle {
-  display: flex;
-  gap: 10px;
-  height: 180px;
+    display: flex;
+    gap: 10px;
+    height: 180px;
 }
 #bio-section {
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
-  width: 40%;
-  overflow-y: auto;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    overflow-y: auto;
 }
 #bio a {
-  color: var(--lightOrange);
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--lightOrange);
+    text-decoration: none;
+    font-weight: bold;
 }
 #badges {
-  display: flex;
-  gap: 5px;
+    display: flex;
+    gap: 5px;
 }
 #activity {
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow-y: auto;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
 }
 #recent-activity {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 #recent-activity a {
-  color: var(--lightOrange);
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--lightOrange);
+    text-decoration: none;
+    font-weight: bold;
 }
 .activity-time {
-  color: #c4c4c4;
-  font-style: italic;
+    color: #c4c4c4;
+    font-style: italic;
 }
 #connections {
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow-y: auto;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
 }
 #connections-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 #connections-list a {
-  color: var(--lightOrange);
-  text-decoration: none;
-  font-weight: bold;
+    color: var(--lightOrange);
+    text-decoration: none;
+    font-weight: bold;
 }
 #user-info-bottom {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
 }
 #badges {
-  color: var(--primary);
+    color: var(--primary);
 }
 #report {
-  color: red !important;
-  padding: 0px;
-  margin: 0px;
-  text-decoration: none;
+    color: red !important;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
 }
 #report img {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 #joindate,
 #country {
-  color: #c4c4c4;
+    color: #c4c4c4;
 }
 #user-items {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
 #featured-projects {
-  background-color: var(--innerBlock);
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    background-color: var(--innerBlock);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 #featured-projects a,
 #shared-projects a {
-  color: var(--lightOrange);
-  font-weight: bold;
-  transition: ease 0.3s;
+    color: var(--lightOrange);
+    font-weight: bold;
+    transition: ease 0.3s;
 }
 #featured-projects a:hover,
 #shared-projects a:hover {
-  filter: brightness(80%);
+    filter: brightness(80%);
 }
 #featured-projects-row {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 .project {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
-  width: 270px;
-  flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
+    width: 270px;
+    flex: 0 0 auto;
 }
 .project-top {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .project-thumbnail {
-  height: 100px;
-  aspect-ratio: 4 / 3; /* scratch project aspect ratio */
-  border-radius: 10px;
-  transition: filter 0.3s ease;
+    height: 100px;
+    aspect-ratio: 4 / 3; /* scratch project aspect ratio */
+    border-radius: 10px;
+    transition: filter 0.3s ease;
 }
 
 .project-thumbnail:hover {
-  filter: brightness(80%);
+    filter: brightness(80%);
 }
 .project-date {
-  color: #c4c4c4;
-  font-style: italic;
+    color: #c4c4c4;
+    font-style: italic;
 }
 a {
-  color: var(--lightOrange);
-  font-weight: bold;
-  text-decoration: none;
+    color: var(--lightOrange);
+    font-weight: bold;
+    text-decoration: none;
 }
-#shared-projects, #following-panel {
-  background-color: var(--innerBlock);
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#shared-projects,
+#following-panel {
+    background-color: var(--innerBlock);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 #shared-projects-section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #shared-projects-section-head a {
-  text-decoration: none;
+    text-decoration: none;
 }
 #shared-projects-row {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 .project-title a {
-  color: var(--univText) !important;
-  text-decoration: none !important;
-  transition: ease 0.3s all !important;
+    color: var(--univText) !important;
+    text-decoration: none !important;
+    transition: ease 0.3s all !important;
 }
 
 .project-title a:hover {
-  color: #c4c4c4 !important;
+    color: #c4c4c4 !important;
 }
