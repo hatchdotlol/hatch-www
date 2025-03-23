@@ -1,5 +1,35 @@
 let logged_out = !localStorage.getItem("token");
 
+if (!logged_out) {
+    fetch("https://api.hatch.lol/auth/me", {
+        headers: {
+            Token: localStorage.getItem("token"),
+        },
+    }).then((res) => {
+        if (res.status === 200) {
+            res.json().then((json) => {
+                document.querySelector(
+                    "html"
+                ).style = `--primary: ${json.theme}`;
+                if (localStorage.getItem("theme") !== json.theme) {
+                    localStorage.setItem("theme", json.theme);
+                }
+                document.getElementById(
+                    "pfpnav"
+                ).src = `https://api.hatch.lol${json.profilePicture}?size=30`;
+                document.getElementById("usernamenav").innerText =
+                    json.displayName;
+                document.getElementsByClassName(
+                    "nav-your-profile"
+                )[0].href = `https://dev.hatch.lol/user/?u=${json.name}`;
+            });
+        } else {
+            localStorage.removeItem("token");
+            location.reload();
+        }
+    });
+}
+
 if (logged_out) {
     document.querySelector("html").style = "--primary: #ffbd59";
 } else if (localStorage.getItem("theme")) {
@@ -118,30 +148,3 @@ searchInp.onkeydown = (e) => {
         searchMade();
     }
 };
-
-if (localStorage.getItem("token") !== null) {
-    fetch("https://api.hatch.lol/auth/me", {
-        headers: {
-            Token: localStorage.getItem("token"),
-        },
-    }).then((res) => {
-        if (res.status === 200) {
-            res.json().then((json) => {
-                document.querySelector(
-                    "html"
-                ).style = `--primary: ${json.theme}`;
-                if (localStorage.getItem("theme") !== json.theme) {
-                    localStorage.setItem("theme", json.theme);
-                }
-                document.getElementById(
-                    "pfpnav"
-                ).src = `https://api.hatch.lol${json.profilePicture}?size=30`;
-                document.getElementById("usernamenav").innerText =
-                    json.displayName;
-                document.getElementsByClassName(
-                    "nav-your-profile"
-                )[0].href = `https://dev.hatch.lol/user/?u=${json.name}`;
-            });
-        }
-    });
-}
