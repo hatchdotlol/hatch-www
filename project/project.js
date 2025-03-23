@@ -116,6 +116,10 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                 localStorage.getItem("token") && data.rating === "13+"
                     ? `?token=${localStorage.getItem("token")}`
                     : ""
+            }${
+                localStorage.getItem("token")
+                    ? `&cloud_host=wss://clouddata.hatch.lol/?token=${localStorage.getItem("token")}`
+                    : ""
             }`;
             document.querySelector("#project-description").innerHTML =
                 text_modify(data.description);
