@@ -135,7 +135,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                           localStorage.getItem("token")
                               ? `&cloud_host=wss://clouddata.hatch.lol/?token=${localStorage.getItem("token")}&project_id=${id}`
                               : ""
-                      }?username=${user.name}`;
+                      }&username=${user.name}`;
                         if (user.name === data.author.username) {
                             document.querySelector(
                                 "#project-edit-button"
