@@ -110,17 +110,6 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                     "title",
                     new Date(data.uploadTs * 1000).toString()
                 );
-            document.querySelector(
-                "#project-embed"
-            ).src = `https://warp.algebrahelp.org/embed.html?project_url=https://api.hatch.lol/projects/${id}/content${
-                localStorage.getItem("token") && data.rating === "13+"
-                    ? `?token=${localStorage.getItem("token")}`
-                    : ""
-            }${
-                localStorage.getItem("token")
-                    ? `&cloud_host=wss://clouddata.hatch.lol/?token=${localStorage.getItem("token")}&project_id=${id}`
-                    : ""
-            }`;
             document.querySelector("#project-description").innerHTML =
                 text_modify(data.description);
 
@@ -136,6 +125,17 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
             }).then((res) => {
                 if (res.status === 200) {
                     res.json().then((user) => {
+                      document.querySelector(
+                        "#project-embed"
+                      ).src = `https://warp.algebrahelp.org/embed.html?project_url=https://api.hatch.lol/projects/${id}/content${
+                          localStorage.getItem("token") && data.rating === "13+"
+                              ? `?token=${localStorage.getItem("token")}`
+                              : ""
+                      }${
+                          localStorage.getItem("token")
+                              ? `&cloud_host=wss://clouddata.hatch.lol/?token=${localStorage.getItem("token")}&project_id=${id}`
+                              : ""
+                      }?username=${user.name}`;
                         if (user.name === data.author.username) {
                             document.querySelector(
                                 "#project-edit-button"
