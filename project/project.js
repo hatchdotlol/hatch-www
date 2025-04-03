@@ -150,6 +150,18 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                         ).src = `https://api.hatch.lol${user.profilePicture}?size=40`;
                     });
                 } else {
+                    document.querySelector(
+                        "#project-embed"
+                      ).src = `https://warp.algebrahelp.org/embed.html?project_url=https://api.hatch.lol/projects/${id}/content${
+                          localStorage.getItem("token") && data.rating === "13+"
+                              ? `?token=${localStorage.getItem("token")}`
+                              : ""
+                      }${
+                          localStorage.getItem("token")
+                              ? `&cloud_host=wss://clouddata.hatch.lol/?token=${localStorage.getItem("token")}&project_id=${id}`
+                              : ""
+                      }&username`;
+                        
                     document.querySelector("#project-edit-button").remove();
 
                     if (data.rating === "13+") {
