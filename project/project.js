@@ -2,6 +2,49 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 const rate_dialog = document.querySelector("#rate-dialog");
 
+window.addEventListener("message", (e) => {
+  console.log(e);
+  if (e.data.method === "hatchdotlol.write") {
+    fetch("https://api.hatch.lol/auth/me", {
+      headers: {
+          Token: localStorage.getItem("token"),
+      }
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((user) => {
+          fetch(`https://hatchsaves.raynec.dev/${id}/${user.id}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              data: e.data.data
+            })
+          });
+        });
+      }
+    });
+  } else if (e.data.method === "hatchdotlol.read") {
+    fetch("https://api.hatch.lol/auth/me", {
+      headers: {
+          Token: localStorage.getItem("token"),
+      }
+    }).then((res) => {
+      if (res.status === 200) {
+        res.json().then((user) => {
+          fetch(`https://hatchsaves.raynec.dev/${id}/${user.id}`).then((res) => {
+            if (res.ok) {
+              res.json().then(data => {
+                document.querySelector("#project-embed").contentWindow.postMessage({ method: "hatchdotlol.writeToDataVar", data: data.data }, "*");
+              });
+            }
+          });
+        });
+      }
+    });
+  }
+});
+
 document.querySelector("#share").addEventListener("click", () => {
     document.querySelector("#share-dialog").open =
         !document.querySelector("#share-dialog").open;
