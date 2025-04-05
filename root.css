@@ -67,7 +67,9 @@ a:hover {
     padding: 10px;
     border-radius: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     display: inline-block;
+    word-break: break-all;
 }
 .small-user img {
     width: 60px;
