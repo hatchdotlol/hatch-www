@@ -98,7 +98,9 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
             document.querySelector(
                 "#author-username"
             ).href = `/user/?u=${data.author.username}`;
-
+            document.querySelector(
+                "#author-logo-parent"
+            ).href = `/user/?u=${data.author.username}`;
             document.querySelector("#project-title").innerText = data.title;
             document.querySelector("#project-version").innerText =
                 "v" + data.version;
