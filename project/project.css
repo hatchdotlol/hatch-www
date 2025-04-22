@@ -282,6 +282,7 @@ a.comment-reply {
 }
 p.content {
     margin-top: 0;
+    word-break: break-word;
 }
 a {
     color: var(--navLight);
