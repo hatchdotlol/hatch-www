@@ -225,7 +225,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
             <a href="/user/?u=${
                 comment.author.username
             }" class="comment-username">${comment.author.displayName}</a>
-            <p class="comment-time" title="${exact_date}">${date}</p><a class="comment-reply"><i class="fa-solid fa-reply"></i> Reply</a><a href="#report" class="comment-report"><i class="fa-solid fa-flag"></i></a>
+            <p class="comment-time" title="${exact_date}">${date}</p><a class="comment-reply" href="javascript:void"><i class="fa-solid fa-reply"></i> Reply</a><a href="#report" class="comment-report"><i class="fa-solid fa-flag"></i></a>
           </div>
           <p class="content">${
               comment.replyTo === null
