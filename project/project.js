@@ -232,8 +232,82 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                   ? ""
                   : `<a href="/user/?u=${comment.replyTo}">@${comment.replyTo}</a> `
           }${text_modify(comment.content)}</p>
+          <div class="comment-input">
+                <form
+                    class="comment-submit"
+                    data-id="${comment.id}"
+                >
+                    <input
+                        type="text"
+                        placeholder="Post a reply..."
+                        autocomplete="off"
+                    />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+            ${(() => {
+                let replyHTML = "";
+                comment.replies.forEach((reply) => {
+                    let exact_date = new Date(
+                        reply.postDate * 1000
+                    ).toString();
+                    let date = time_ago(reply.postDate * 1000);
+                    replyHTML += `
+                    <div class="comment reply">
+                        <div class="comment-top">
+                            <img src="${`https://api.hatch.lol${reply.author.profilePicture}`}?size=40" class="comment-pfp" alt="Profile picture">
+                            <a href="/user/?u=${
+                                reply.author.username
+                            }" class="comment-username">${reply.author.displayName}</a>
+                            <p class="comment-time" title="${exact_date}">${date}</p><a href="#report" class="comment-report"><i class="fa-solid fa-flag"></i></a>
+                        </div>
+                        <p class="content">${text_modify(reply.content)}</p>
+                        <div class="comment-input">
+                            <form
+                                class="comment-submit"
+                                data-id="${reply.id}"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Post a comment..."
+                                    autocomplete="off"
+                                />
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </div>
+                    </div>`;
+                });
+                return replyHTML;
+            })()}
         </div>
         ${document.querySelector("#comments").innerHTML}`;
+                        });
+                        Array.from(document.querySelectorAll(".comment-reply")).forEach((comment) => {
+                            comment.addEventListener("click", () => {
+                                comment.parentElement.parentElement.querySelector(".comment-input").classList.toggle("show");
+                                comment.parentElement.parentElement.querySelector(".comment-input input[type=\"text\"]").focus();
+                            });
+                        });
+                        Array.from(document.querySelectorAll(".comment .comment-submit")).forEach((form) => {
+                            form.addEventListener("submit", (e) => {
+                                e.preventDefault();
+                                fetch(`https://api.hatch.lol/projects/${id}/comments`, {
+                                    method: "POST",
+                                    headers: {
+                                        Token: localStorage.getItem("token"),
+                                        "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify({
+                                        content: form.querySelector("input[type=\"text\"]").value,
+                                        reply_to: parseInt(form.dataset.id)
+                                    })
+                                }).then((res) => {
+                                    if (res.status === 200) {
+                                        form.querySelector("input[type=\"text\"]").value = "";
+                                        form.querySelector("input[type=\"text\"]").placeholder = "Comment posted!";
+                                    }
+                                });
+                            });
                         });
                     });
                 }

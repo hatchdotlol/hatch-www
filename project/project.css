@@ -234,7 +234,6 @@ form.comment-submit > input[type="submit"]:hover {
 }
 .reply {
     background-color: var(--innerBlock);
-    margin-left: 10px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
@@ -275,6 +274,7 @@ a.comment-reply {
     color: var(--univText);
     padding-right: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .comment-pfp {
     width: 30px;
@@ -463,4 +463,15 @@ dialog {
 }
 #comments:has(.comment) #no-comments-text {
     display: none;
+}
+.comment .comment-input {
+  display: none;
+  margin-bottom: 10px;
+}
+.comment .comment-input.show {
+  display: block;
+}
+.comment .comment-input input {
+  background-color: var(--innerBlock) !important;
+  border-color: var(--innerBlock) !important;
 }
