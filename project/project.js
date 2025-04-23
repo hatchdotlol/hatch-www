@@ -255,23 +255,23 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                     ).toString();
                     let date = time_ago(reply.postDate * 1000);
                     replyHTML += `
-                    <div class="comment reply">
+                    <div class="comment reply" data-username="${reply.author.username}">
                         <div class="comment-top">
                             <img src="${`https://api.hatch.lol${reply.author.profilePicture}`}?size=40" class="comment-pfp" alt="Profile picture">
                             <a href="/user/?u=${
                                 reply.author.username
                             }" class="comment-username">${reply.author.displayName}</a>
-                            <p class="comment-time" title="${exact_date}">${date}</p><a href="#report" class="comment-report"><i class="fa-solid fa-flag"></i></a>
+                            <p class="comment-time" title="${exact_date}">${date}</p><a class="comment-reply" href="javascript:void"><i class="fa-solid fa-reply"></i> Reply</a><a href="#report" class="comment-report"><i class="fa-solid fa-flag"></i></a>
                         </div>
                         <p class="content">${text_modify(reply.content)}</p>
                         <div class="comment-input">
                             <form
                                 class="comment-submit"
-                                data-id="${reply.id}"
+                                data-id="${comment.id}"
                             >
                                 <input
                                     type="text"
-                                    placeholder="Post a comment..."
+                                    placeholder="Post a reply..."
                                     autocomplete="off"
                                 />
                                 <input type="submit" value="Submit" />
@@ -300,7 +300,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                                         "Content-Type": "application/json",
                                     },
                                     body: JSON.stringify({
-                                        content: form.querySelector("input[type=\"text\"]").value,
+                                        content: form.parentElement.classList.contains("reply") ? `@${form.parentElement.parentElement.dataset.username} ${form.querySelector("input[type=\"text\"]").value}` : form.querySelector("input[type=\"text\"]").value,
                                         reply_to: parseInt(form.dataset.id)
                                     })
                                 }).then((res) => {
