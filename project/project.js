@@ -300,7 +300,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                                         "Content-Type": "application/json",
                                     },
                                     body: JSON.stringify({
-                                        content: form.parentElement.classList.contains("reply") ? `@${form.parentElement.parentElement.dataset.username} ${form.querySelector("input[type=\"text\"]").value}` : form.querySelector("input[type=\"text\"]").value,
+                                        content: form.parentElement.parentElement.classList.contains("reply") ? `@${form.parentElement.parentElement.dataset.username} ${form.querySelector("input[type=\"text\"]").value}` : form.querySelector("input[type=\"text\"]").value,
                                         reply_to: parseInt(form.dataset.id)
                                     })
                                 }).then((res) => {
