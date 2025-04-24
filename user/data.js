@@ -213,5 +213,29 @@ fetch(`https://api.hatch.lol/users/${username}/projects`).then((res) => {
           ${document.querySelector("#recent-activity").innerHTML}`;
       });
     });
+  };
+});
+
+document.getElementById("report").addEventListener("click", () => {
+  document.getElementById("report-popup").classList.add("show");
+});
+
+document.getElementById("report-popup-close").addEventListener("click", () => {
+  document.getElementById('report-popup').classList.remove('show');
+});
+
+const reportReason = document.getElementById("report-reason");
+const reportWarning = document.getElementById("report-warning");
+const reportButton = document.querySelector("#report-popup div button[type=\"submit\"]");
+reportReason.addEventListener("change", () => {
+  reportWarning.innerText = "";
+  reportButton.disabled = false;
+  if (reportReason.value === "0") {
+    reportWarning.innerText = "It is highly recommended to choose one of the other categories.";
+  } else if (reportReason.value === "6" || reportReason.value === "8") {
+    reportWarning.innerText = "We are not responsible for people's activity on other social platforms.";
+    reportButton.disabled = true;
+  } else if (reportReason.value === "7") {
+    reportWarning.innerText = "Please note- your request will only be considered if the user is very inactive. We will email you with a follow-up.";
   }
 });

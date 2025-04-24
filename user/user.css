@@ -201,10 +201,6 @@ p {
     margin: 0px;
     text-decoration: none;
 }
-#report img {
-    width: 10px;
-    height: 10px;
-}
 #joindate,
 #country {
     color: #c4c4c4;
@@ -303,4 +299,40 @@ a {
 
 .project-title a:hover {
     color: #c4c4c4 !important;
+}
+
+#report-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000085;
+    z-index: 10002;
+}
+
+#report-popup div {
+    outline: 0.125rem white solid;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--innerBlock2);
+    border-radius: 0.625rem;
+    padding: 1rem;
+    max-width: 100vw;
+    width: 30rem;
+}
+
+#report-popup div p {
+    margin: 1rem 0;
+}
+
+#report-popup.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(#report-popup.show) {
+    overflow: hidden;
 }

@@ -22,6 +22,26 @@
         />
     </head>
     <body>
+        <div id="report-popup">
+            <div>
+                <h1>Report user</h1>
+                <p>Please select a reason for reporting this user. If the user has posted inappropriate projects or galleries, please report those individually instead.</p>
+                <select id="report-reason" aria-label="Reason">
+                    <option value="1">Impersonating</option>
+                    <option value="2">Discriminatory against group or person</option>
+                    <option value="3">Inappropriate bio</option>
+                    <option value="4">Inappropriate banner or profile picture</option>
+                    <option value="5">Project/following list forms inappropriate phrase or image</option>
+                    <option value="6">Drama off-site</option>
+                    <option value="7">I want their username</option>
+                    <option value="8">A connection has inappropriate content</option>
+                    <option value="0">Other</option>
+                </select>
+                <p id="report-warning"></p>
+                <button type="submit">Submit</button>
+                <a id="report-popup-close"><button>Cancel</button></a>
+            </div>
+        </div>
         <div id="navarea"></div>
         <div id="main">
             <div id="content">
@@ -232,12 +252,10 @@
                             </div>
                             <div id="joindate"></div>
                             <div id="country"></div>
-                            <div id="report">
-                                <a id="report" href="#report"
-                                    ><img
-                                        src="https://rdr.lol/u/JRHxiZ.png"
-                                        alt="Report"
-                                    />
+                            <div>
+                                <a id="report" href="javascript:void"
+                                    >
+                                    <i class="fa-solid fa-flag"></i>
                                     Report User</a
                                 >
                             </div>
