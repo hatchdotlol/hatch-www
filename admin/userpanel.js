@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         const userdata = await userResponse.json();
                         const userJoinDate = userdata.joinDate;
                         const userBio = userdata.bio;
-                        const pfpUrl = userdata.profilePicture;
+                        const pfpUrl = userdata.profilePicture + "?size=400";
                         const displayName = userdata.displayName;
 
                         const isBannedResponse = await fetch(
