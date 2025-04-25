@@ -204,13 +204,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
 
             document.querySelector(
                 "#project-see-inside-button"
-            ).href = `https://turbowarp.org/editor?project_url=https://api.hatch.lol/projects/${id}/content${
-                localStorage.getItem("token") && data.rating === "13+"
-                    ? `%3Ftoken%3D${localStorage.getItem(
-                          "token"
-                      )}#-never-share-your-token`
-                    : ""
-            }`;
+            ).href = `https://hatch.raynec.dev/#${id}`;
 
             fetch(`https://api.hatch.lol/projects/${id}/comments`).then(
                 (res) => {
