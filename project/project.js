@@ -27,7 +27,7 @@ const member_rating = (rating) => {
             "<h3>About this rating</h3><p>Projects considered <b>moderate</b> are suitable for some users. This project may contain some violence, cartoonish blood, light profanity, and scares, and would most likely recieve an NFE rating on Scratch.</p>";
     } else if (rating === "13+") {
         rate_dialog.innerHTML =
-            "<h3>About this rating</h3><p><b>Limited</b> projects are only suitable for teenagers. This project may contain intense violence, blood, profanity, scares, and moderate suggestive content, and would be taken down on Scratch.</p>";
+            "<h3>About this rating</h3><p><b>Restricted</b> projects are only suitable for teenagers. This project may contain intense violence, blood, profanity, scares, and moderate suggestive content, and would be taken down on Scratch.</p>";
     } else {
         rate_dialog.innerHTML =
             "<h3>About this rating</h3><p>This rating is not recognized.</p>";
@@ -116,7 +116,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                 text_modify(data.description);
 
             document.querySelector("#project-age-rating").innerText =
-                ["Unrated", "Safe", "Light", "Moderate", "Limited"][["N/A", "E", "7+", "9+", "13+"].indexOf(data.rating)];
+                ["Unrated", "Safe", "Light", "Moderate", "Restricted"][["N/A", "E", "7+", "9+", "13+"].indexOf(data.rating)];
 
             document.querySelector("#project-age-rating").classList.add(`teen-${data.rating}`);
 
