@@ -10,7 +10,7 @@ if (!logged_out) {
             res.json().then((json) => {
                 document.querySelector(
                     "html"
-                ).style = `--primary: ${json.theme}`;
+                ).style = `--primary: ${json.theme}; --pDim: ${json.theme}2c`;
                 if (localStorage.getItem("theme") !== json.theme) {
                     localStorage.setItem("theme", json.theme);
                 }
@@ -31,7 +31,8 @@ if (!logged_out) {
 }
 
 if (logged_out) {
-    document.querySelector("html").style = "--primary: #ffbd59";
+    document.querySelector("html").style =
+        "--primary: #ffbd59; --pDim: #ffbd59CC";
 } else if (localStorage.getItem("theme")) {
     document.querySelector("html").style = `--primary: ${localStorage.getItem(
         "theme"

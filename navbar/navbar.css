@@ -4,7 +4,7 @@
     /* yeah that works but i use sticky on my main website and it works fine idk. 
        also i cant do this because it makes stuff go undr it and margin-bottom doesnt work here and
        its not worth the braincells to try to fix it so im just gonna leave it unsticky */
-    background-color: var(--navLight);
+    background-color: var(--primary);
     width: 80%;
     height: 50px;
     top: 0;
@@ -123,6 +123,7 @@
     float: left;
     margin: 0px;
     padding-left: 30px;
+    color: #000 !important;
 }
 .fa-magnifying-glass {
     position: absolute;

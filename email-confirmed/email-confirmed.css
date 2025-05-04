@@ -1,0 +1,38 @@
+.content {
+    background-color: var(--innerBlock);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+.banner {
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--univText);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--innerBlock2);
+}
+.container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+.paragraph {
+    background-color: var(--innerBlock2);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--univText);
+    margin-right: none;
+    height: auto;
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease all;
+}
+a:hover {
+    color: var(--pDim);
+}

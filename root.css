@@ -2,6 +2,13 @@
     --navLight: var(--primary); /* navbar appearance */
     --navDark: var(--primary); /* navbar appearance */
     --lightOrange: var(--primary); /* orange links around the site */
+    /*
+     * !! DEVELOPER NOTE by mr hagen :ok:
+     *
+     * please start using --primary instead of whatever these are
+     *
+     * also there is --pDim which is primary color with an alpha of 80% for stuff like links and whatnot
+    */
     --searchBar: #0000002c; /* search bar background-color */
     --websiteBack: #000000; /* main background */
     --univText: #ffffff; /* text color */
