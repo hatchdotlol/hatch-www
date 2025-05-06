@@ -3,161 +3,161 @@ h2,
 h3,
 h4,
 p {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* welcome */
 #welcome {
-  background-color: var(--innerBlock);
-  border-radius: 10px;
-  padding: 10px;
-  color: var(--univText);
+    background-color: var(--innerBlock);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--univText);
 }
 
 #welcomenamecontain {
-  background-color: var(--innerBlock2);
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 50px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  gap: 10px;
+    /* background-color: var(--innerBlock2); */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 10px;
 }
 
 #welcomepfp {
-  display: flex;
-  border-radius: 10px;
-  height: 100px;
-  width: 100px;
+    display: flex;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
 }
 
 #welcomename {
-  margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
 }
 
 #update {
-  background-color: var(--innerBlock2);
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  color: var(--univText);
+    background-color: var(--innerBlock2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    color: var(--univText);
 }
 
 #updatetext {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #updatetext > a {
-  color: var(--lightOrange);
-  font-weight: bold;
+    color: var(--lightOrange);
+    font-weight: bold;
 }
 
 #projects {
-  color: var(--univText);
-  background-color: var(--innerBlock);
-  border-radius: 10px;
-  padding: 10px;
+    color: var(--univText);
+    background-color: var(--innerBlock);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #projthumb {
-  width: 180px;
-  border-radius: 5px;
+    width: 180px;
+    border-radius: 5px;
 }
 
 #project {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 #projcontain {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
 }
 
 #projsecthead {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 #seeallproj {
-  float: right;
-  display: flex;
+    float: right;
+    display: flex;
 }
 
 #projhead {
-  display: flex;
-  font-size: 20px;
+    display: flex;
+    font-size: 20px;
 }
 
 #author {
-  display: flex;
-  font-size: 10px;
+    display: flex;
+    font-size: 10px;
 }
 
 #checkout {
-  display: flex;
-  background-color: var(--innerBlock);
-  color: var(--univText);
-  padding: 10px;
-  border-radius: 10px;
-  flex-direction: column;
+    display: flex;
+    background-color: var(--innerBlock);
+    color: var(--univText);
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
 }
 
 #checkouthead {
-  background-color: var(--innerBlock2);
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 20px;
+    background-color: var(--innerBlock2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 #eventcontainer {
-  display: flex;
-  gap: 7.5px;
-  overflow-x: auto;
+    display: flex;
+    gap: 7.5px;
+    overflow-x: auto;
 }
 
 .event {
-  background-color: var(--innerBlock2);
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 10px;
-  gap: 7.5px;
-  height: 200px;
-  max-height: 200px;
-  max-width: 33.33%;
-  overflow-y: auto;
+    background-color: var(--innerBlock2);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 7.5px;
+    height: 200px;
+    max-height: 200px;
+    max-width: 33.33%;
+    overflow-y: auto;
 }
 
 .eventthumb {
-  display: flex;
-  margin: auto;
+    display: flex;
+    margin: auto;
 }
 
 .eventimg {
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 180px;
-  height: 101.25px;
-  border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 180px;
+    height: 101.25px;
+    border-radius: 10px;
 }
 
 .eventdesccontain {
-  padding: 10px;
-  border-radius: 10px;
-  color: var(--univText);
-  background-color: var(--innerBlock);
-  height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--univText);
+    background-color: var(--innerBlock);
+    height: fit-content;
 }
 
 .eventname {
-  font-size: 20px;
-  margin-bottom: 10px;
-  overflow-x: hidden;
+    font-size: 20px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
 }
