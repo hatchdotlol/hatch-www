@@ -196,9 +196,9 @@ fetch(`https://api.hatch.lol/users/${username}/projects`).then((res) => {
                         <div class="project-top">
                             <a href="/project/?id=${project.id}"><img src="https://api.hatch.lol${project.thumbnail}?size=140" alt="Project thumbnail" class="project-thumbnail"></a>
                             <p class="project-stats">
-                                <i class="fa-solid fa-square-caret-up"></i>&ensp;?<br>
+                                <i class="fa-solid fa-square-caret-up"></i>&ensp;${project.upvotes + project.downvotes === 0 ? "N/A" : `${100 * project.upvotes / (project.upvotes + project.downvotes)}% (${project.upvotes + project.downvotes})`}<br>
                                 <i class="fa-solid fa-eye"></i>&ensp;?<br>
-                                <i class="fa-solid fa-message"></i>&ensp;?<br>
+                                <i class="fa-solid fa-message"></i>&ensp;${project.commentCount}<br>
                                 <span class="project-date">${new Date(project.uploadTs * 1000).getMonth() + 1}/${new Date(project.uploadTs * 1000).getDate()}/${new Date(project.uploadTs * 1000).getFullYear() - 2000}</span>
                             </p>
                         </div>
