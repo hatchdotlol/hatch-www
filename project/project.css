@@ -480,7 +480,7 @@ dialog {
   background-color: var(--innerBlock) !important;
   border-color: var(--innerBlock) !important;
 }
-:where(.upvote, .downvote), button {
+:where(.upvote, .downvote) button {
     background-color: inherit;
     color: inherit;
     font: inherit;
