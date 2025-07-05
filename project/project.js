@@ -120,6 +120,48 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
 
             document.querySelector("#project-age-rating").classList.add(`teen-${data.rating}`);
 
+            document.querySelector("#upvote-count").innerText = data.upvotes;
+            document.querySelector("#downvote-count").innerText = data.downvotes;
+            document.querySelector("#vote-percent").innerText = data.upvotes + data.downvotes === 0 ? "" : `(${100 * data.upvotes / (data.upvotes + data.downvotes)}%)`;
+
+            document.querySelector("#upvote-count").addEventListener("click", (event) => {
+                fetch(`https://api.hatch.lol/projects/${id}/upvote`, {
+                    method: "POST",
+                    headers: {
+                        "Token": localStorage.getItem("token")
+                    }
+                }).then(() => {
+                    fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
+                        if (res.ok) {
+                            res.json().then(data => {
+                                document.querySelector("#upvote-count").innerText = data.upvotes;
+                                document.querySelector("#downvote-count").innerText = data.downvotes;
+                                document.querySelector("#vote-percent").innerText = data.upvotes + data.downvotes === 0 ? "" : `(${100 * data.upvotes / (data.upvotes + data.downvotes)}%)`;
+                            });
+                        }
+                    });
+                });
+            });
+
+            document.querySelector("#downvote-count").addEventListener("click", (event) => {
+                fetch(`https://api.hatch.lol/projects/${id}/downvote`, {
+                    method: "POST",
+                    headers: {
+                        "Token": localStorage.getItem("token")
+                    }
+                }).then(() => {
+                    fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
+                        if (res.ok) {
+                            res.json().then(data => {
+                                document.querySelector("#upvote-count").innerText = data.upvotes;
+                                document.querySelector("#downvote-count").innerText = data.downvotes;
+                                document.querySelector("#vote-percent").innerText = data.upvotes + data.downvotes === 0 ? "" : `(${100 * data.upvotes / (data.upvotes + data.downvotes)}%)`;
+                            });
+                        }
+                    });
+                });
+            });
+
             fetch("https://api.hatch.lol/auth/me", {
                 headers: {
                     Token: localStorage.getItem("token"),
@@ -308,13 +350,7 @@ fetch(`https://api.hatch.lol/projects/${id}`).then((res) => {
                     });
                 }
             );
-
-            document.querySelector("#upvote-count").innerText =
-                "Coming soon...";
-            document.querySelector("#downvote-count").innerText =
-                "Coming soon...";
-            document.querySelector("#vote-percent").innerText =
-                "Coming soon...";
+            
             document.querySelector("#project-tags").innerText =
                 "Coming soon...";
             document.body.classList.remove("loading");
