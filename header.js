@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    document.getElementById("header").innerHTML = await (await fetch("/header.html")).text();
+    document.getElementById("header").innerHTML = await (await fetch("/components/header.html")).text();
 
     const navLinks = document.getElementById("nav-links");
 
