@@ -1,14 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const searchBar = document.getElementById("nav-searchbar");
     const navLinks = document.getElementById("nav-links");
-    searchBar.addEventListener("focus", () => {
-        searchBar.style.width = "490px";
-        navLinks.classList.add("hide");
-    });
-    searchBar.addEventListener("focusout", () => {
-        searchBar.style.width = "200px";
-        navLinks.classList.remove("hide");
-    });
 
     const bubble = document.getElementById("nav-bubble");
     const links = navLinks.querySelectorAll("a");
