@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hatch</title>
-        <link rel="stylesheet" href="/root.css" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="navbar/navbar.css" />
-        <link rel="stylesheet" href="footer/footer.css" />
-        <link rel="stylesheet" href="/index.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -14,181 +22,118 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet"
-        />
-        <!--
-        <meta http-equiv="refresh" content="0; url=404.html" />
-        If you want this page temporarily down, add this tag in the <head>
-        -->
     </head>
-
-    <body class="loading">
-        <div id="navarea"></div>
-        <!-- Main Page -->
-        <div id="main">
-            <div id="welcome" class="loading-skeleton">
-                <div id="welcomenamecontain">
-                    <img id="welcomepfp" src="" alt="Your profile picture" />
-                    <div id="welcomename">Welcome back!</div>
-                </div>
-                <!-- Hidden for now until we have these features working
-                <div class="spacer"></div>
-                <div id="update">
-                    <div id="updatetext">
-                        Since you last checked, you have recieved&nbsp;<a
-                            href="#null"
-                            >25 messages</a
-                        >, and&nbsp;<a href="#null">2 new events</a>&nbsp;have
-                        happened!
-                    </div>
-                </div>
-                -->
+    <body>
+        <div id="header">
+            <div class="nav-logo">
+                <img src="assets/icon-transparent-yellow.png" />
+                <p>hatch</p>
             </div>
-            <div class="spacer"></div>
-            <div id="projects">
-                <div id="projsecthead">
-                    <div id="projhead">Featured Projects</div>
-                    <div id="seeallproj">
-                        <span
-                            >See All&nbsp;<i class="fa-solid fa-arrow-right"></i
-                        ></span>
-                    </div>
-                </div>
-                <div id="projcontain">
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                    <div id="project">
-                        <img
-                            src="https://rdr.lol/u/Ra9tJI.png"
-                            id="projthumb"
-                            alt="Project thumbnail"
-                        />
-                        <div id="projname">Project Title</div>
-                        <div id="author">User</div>
-                    </div>
-                </div>
+            <div id="nav-search">
+                <input
+                    id="nav-searchbar"
+                    type="text"
+                    placeholder="Search Hatch..."
+                />
             </div>
-            <div class="spacer"></div>
-            <div id="checkout">
-                <div id="checkouthead">Check out these recent events!</div>
-                <div class="spacer"></div>
-                <div id="eventcontainer">
-                    <div class="event">
-                        <div class="eventthumb">
-                            <img
-                                src="https://rdr.lol/u/Vnky1S.png"
-                                class="eventimg"
-                                alt="Event thumbnail"
-                            />
-                        </div>
-                        <div class="eventdesccontain">
-                            <h3 class="eventname">
-                                Event Name. This one is two lines!
-                            </h3>
-                            <p class="eventdesc">
-                                This is some text! yap yap yap yap yap yap yap
-                                yap yap yap yap yap yap yap yap yap yap yap yap
-                                yap yap yap yap yap yap yap yap yap yap yap yap
-                                yap yap yap yap yap yap yap yap yap yap yap yap
-                                yap yap yap yap yap yap yap yap yap yap yap yap
-                                yap yap yap yap yap yap yap yap yap yap yap
-                            </p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="eventthumb">
-                            <img
-                                src="https://rdr.lol/u/Vnky1S.png"
-                                class="eventimg"
-                                alt="Event thumbnail"
-                            />
-                        </div>
-                        <div class="eventdesccontain">
-                            <h3 class="eventname">
-                                Event Name. This one is two lines!
-                            </h3>
-                            <p class="eventdesc">This is some text!</p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="eventthumb">
-                            <img
-                                src="https://rdr.lol/u/Vnky1S.png"
-                                class="eventimg"
-                                alt="Event thumbnail"
-                            />
-                        </div>
-                        <div class="eventdesccontain">
-                            <h3 class="eventname">
-                                Event Name. This one is two lines!
-                            </h3>
-                            <p class="eventdesc">This is some text!</p>
-                        </div>
-                    </div>
-                </div>
+            <div id="nav-links">
+                <div id="nav-bubble"></div>
+                <a class="nav-link-cur" href="/">Home</a>
+                <a class="nav-link" href="/explore">Explore</a>
+                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="https://wiki.hatch.lol">Wiki</a>
+                <a class="nav-link" href="https://forums.hatch.lol"> Forums </a>
             </div>
-            <!--This ends #main - all content inside! Should stick to footer top! NOTHING ABOVE THIS LINE-->
-            <div class="spacer"></div>
+            <div id="nav-login">
+                <a href="#" id="nav-login-btn">Log In</a>
+                <a href="#" id="nav-signup-btn">Sign Up</a>
+            </div>
         </div>
-        <div id="footercontainer"></div>
-        <script src="/navbar/navbar.js"></script>
-        <script src="/footer/footer.js"></script>
-        <script src="/index.js"></script>
+        <div id="body-content">
+            <img src="assets/neon.png" id="home-neon-logo" />
+            <div id="home-info-top">
+                <div id="home-text">Let's get <span>cracking</span></div>
+                <div class="home-text-p">
+                    Hatch isn't out yet, but when it is, we want you to be the
+                    first to know! Join our Discord server and follow us on our
+                    socials to get the latest on development and hang out with
+                    the community.
+                </div>
+                <div class="home-text-btns">
+                    <a
+                        href="https://discord.gg/ENTDZdaGnD"
+                        class="home-social-disc"
+                        ><i class="fa-brands fa-discord"></i>&ensp;Join our
+                        Discord</a
+                    >
+                    <a href="https://x.com/hatch_lol" class="home-social-btn"
+                        ><i class="fa-brands fa-x-twitter"></i
+                    ></a>
+                    <a
+                        href="https://bsky.app/profile/hatch.lol"
+                        class="home-social-btn"
+                        ><i class="fa-brands fa-bluesky"></i
+                    ></a>
+                    <a
+                        href="https://wasteof.money/users/hatch"
+                        class="home-social-btn"
+                        ><i class="fa-solid fa-w"></i
+                    ></a>
+                    <a
+                        href="https://darflen.com/users/hatch"
+                        class="home-social-btn"
+                        ><i class="fa-solid fa-d"></i
+                    ></a>
+                    <a
+                        href="https://github.com/hatchdotlol"
+                        class="home-social-btn"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                </div>
+                <div style="height: 20px"><!-- spacer --></div>
+                <div class="home-text-sh">What is Hatch?</div>
+                <div class="home-text-p">
+                    Hatch is a third-party project hosting service for projects
+                    made using Scratch and TurboWarp. Scratch is a great option
+                    to learn the fundamentals of programming, but it is designed
+                    for young children. Many Scratchers understandably find
+                    themselves outgrowing Scratch as they get older, and/or have
+                    distaste for new Scratch features, but they want to keep
+                    using the Scratch editor to create projects. Hatch was
+                    designed with this group of users in mind. While we're very
+                    similar to Scratch, having a close online community, we have
+                    more relaxed rules, allowing for more content types and
+                    genres that may not be suitable for the Scratch website.
+                </div>
+                <div class="home-text-btns">
+                    <a class="home-more-btn" href="/about">
+                        <i class="fa-solid fa-angles-right"></i>&ensp;Learn More
+                    </a>
+                    <a class="home-more-btn" href="https://wiki.hatch.lol/">
+                        <i class="fa-solid fa-circle-info"></i>&ensp;Visit our
+                        Wiki
+                    </a>
+                </div>
+            </div>
+            <div style="height: 20px"><!-- spacer --></div>
+            <div class="home-featured-titlebox">
+                <div class="home-featured-title">Featured Projects</div>
+                <a href="#" class="home-featured-seeall"
+                    >See All&ensp;<i class="fa-solid fa-square-up-right"></i
+                ></a>
+            </div>
+            <div id="home-featured">
+                <div class="home-project">
+                    <div class="hp-1">
+                        <img class="home-project-thm" src="" />
+                        <div class="hp-2">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
     </body>
 </html>

@@ -1,8 +1,273 @@
-/* body.loading .loading-skeleton {
-    background-color: var(--blockBack) !important;
-    color: var(--blockBack) !important;
-    filter: brightness(1.5);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top left, #42331b 00%, #000 45%);
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 200vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#7a7a7a 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#body-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    position: sticky;
+    top: 20px;
+    border-radius: 1000px;
+    background-color: #1b1b1b88;
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.nav-logo {
+    display: flex;
+    gap: 0px;
+}
+
+.nav-logo img {
+    height: 2.7rem;
+}
+
+.nav-logo p {
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
+    color: #ffbd59;
+    font-size: 1.8em;
+}
+
+#nav-links {
+    position: relative; /* Needed for absolute positioning of bubble */
+    align-items: center;
+    justify-content: center;
+    padding-left: 2px;
+    display: flex;
+    gap: 10px;
+    opacity: 1;
+    visibility: visible;
+    width: 290px;
+    transition: opacity 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), visibility 0.3s,
+        width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    overflow: hidden;
+    padding: 4px;
+}
+
+#nav-links.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 0;
+}
+
+#nav-bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #dddddd33;
+    border-radius: 10000px;
+    z-index: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    pointer-events: none;
+}
+
+#nav-login {
+    height: 2.4em;
+    display: flex;
+    border-radius: 1000px;
+    border: 2px solid #ffbd5944;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-signup-btn {
+    height: 2.4em;
+    padding: 8px;
+    background: #ffe159;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 225, 89, 1) 0%,
+        rgba(255, 189, 89, 1) 100%
+    );
+    border-radius: 1000px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav-login-btn {
+    height: 2.4em;
+    padding: 8px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav-searchbar {
+    font-family: "Outfit", sans-serif;
+    height: 2.4em;
+    width: 200px;
+    padding: 8px;
+    background-color: #1b1b1b55;
+    border: 2px solid #ffbd5944;
+    border-radius: 1000px;
+    outline: none;
+    color: #fff;
+    transition: width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+#home-text {
+    font-size: 5em;
+}
+
+#home-info-top {
     z-index: 2;
-    border-radius: 7px;
-    display: inline-block;
-} */
+    position: relative;
+    width: 670px;
+}
+
+#home-neon-logo {
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    width: 400px;
+    rotate: 10deg;
+}
+
+#home-text span {
+    font-weight: 600;
+    background: linear-gradient(
+        -90deg,
+        rgba(255, 225, 89, 1) 0%,
+        rgba(255, 189, 89, 1) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-text-sh,
+.home-featured-title {
+    font-size: 2em;
+}
+
+.home-text-btns {
+    padding-top: 16px;
+}
+
+.home-social-disc,
+.home-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0;
+    background-color: #ffbd59;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 225, 89, 1) 0%,
+        rgba(255, 189, 89, 1) 100%
+    );
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1000px;
+    margin-right: 6px;
+    padding: 8px;
+}
+
+.home-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: #ffbd59;
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link-cur {
+    text-decoration: none;
+    color: #ffbd59 !important;
+    font-weight: bold;
+    border-radius: 10000px;
+}
+
+#home-featured {
+    width: 100%;
+    height: 200px;
+    background-color: #1b1b1b88;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+.home-featured-titlebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.home-featured-seeall {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.home-featured-seeall:hover {
+    color: #ffbd59;
+    font-weight: bold;
+}
