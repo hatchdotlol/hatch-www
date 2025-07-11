@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    document.getElementById("header").innerHTML = await (await fetch("/header.html")).text();
+
     const navLinks = document.getElementById("nav-links");
 
     const bubble = document.getElementById("nav-bubble");
