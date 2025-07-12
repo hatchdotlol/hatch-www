@@ -240,7 +240,7 @@ h2 {
 }
 
 .pill-btn:hover {
-    box-shadow: 0 0px 16px 0 #ffbd59cc;
+    box-shadow: 0 0 1rem 0 #ffbd59cc;
 }
 
 .home-social-btn {
@@ -261,7 +261,7 @@ h2 {
 }
 
 .home-social-btn:hover {
-    box-shadow: 0 0px 16px 0 #ffbd59cc;
+    box-shadow: 0 0 1rem 0 #ffbd59cc;
 }
 
 .nav-link {
@@ -288,9 +288,9 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 0.625rem;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 .home-featured-titlebox {
@@ -311,7 +311,7 @@ h2 {
 .home-featured-seeall:hover {
     color: var(--primary);
     font-weight: bold;
-    text-shadow: 0 0 8px #ffe15955, 0 0 12px #ffbd5955, 0 0 16px #ffbd5955;
+    text-shadow: 0 0 0.5rem #ffe15955, 0 0 0.75rem #ffbd5955, 0 0 1rem #ffbd5955;
 }
 
 p {
@@ -356,19 +356,19 @@ td {
     height: 6rem;
     width: 10.67rem;
     aspect-ratio: 16/9;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .home-project {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 4px;
+    gap: 0.5rem;
+    padding: 0.25rem;
     box-sizing: content-box;
     text-decoration: none;
     width: 10.67rem;
     background-color: #11111155;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
@@ -377,13 +377,13 @@ td {
         font-weight: bold;
     }
     background-color: #42331b55;
-    box-shadow: 0 0px 16px 0 #ffbd59cc;
+    box-shadow: 0 0 1rem 0 #ffbd59cc;
 }
 
 .hp-2 {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0.125rem;
 }
 
 .hp-2 p {
@@ -428,16 +428,16 @@ td {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 16px;
+    width: 1rem;
 }
 
 *::-webkit-scrollbar-track {
     background: #1b1b1b;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: #ffbd59;
-    border-radius: 10px;
-    border: 3px solid #1b1b1b;
+    border-radius: 0.625rem;
+    border: 0.1875rem solid #1b1b1b;
 }
