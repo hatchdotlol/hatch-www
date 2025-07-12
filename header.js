@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("header").innerHTML = await (await fetch("/components/header.html")).text();
 
     if (localStorage.getItem("token")) {
-        const res = await fetch("https://api.hatch.lol/auth/me", {
+        const res = await fetch("https://apiv2.hatch.lol/auth/me", {
             headers: {
                 Token: localStorage.getItem("token")
             }
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (res.ok) {
             window.user = await res.json();
             document.getElementById("header").classList.add("logged-in");
-            document.querySelector("#nav-user img").src = `https://api.hatch.lol/uploads/pfp/${user.id}.png?size=30`;
+            document.querySelector("#nav-user img").src = `https://apiv2.hatch.lol/uploads/pfp/${user.id}.png?size=30`;
             document.querySelector("#nav-user span").innerText = user.displayName ?? user.username;
         }
     }
