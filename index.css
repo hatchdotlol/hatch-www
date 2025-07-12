@@ -1,10 +1,11 @@
 :root {
+    --links: #877eff;
+    --primary: #ffbc59;
+    --secondary: #ffe159;
     color-scheme: dark;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -17,6 +18,7 @@ body {
     position: relative;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    margin: 0;
 }
 
 body::before {
@@ -28,6 +30,10 @@ body::before {
     opacity: 0.25;
     pointer-events: none;
     z-index: -1;
+}
+
+a {
+    color: var(--links);
 }
 
 #body-content {
@@ -71,7 +77,7 @@ body::before {
 
 .nav-logo p {
     font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
-    color: #ffbd59;
+    color: var(--primary);
     font-size: 1.8em;
 }
 
@@ -135,11 +141,11 @@ body::before {
 #nav-signup-btn {
     height: 2.4em;
     padding: 0.5rem 0.75rem;
-    background: #ffe159;
+    background: var(--secondary);
     background: linear-gradient(
         90deg,
-        rgba(255, 225, 89, 1) 0%,
-        rgba(255, 189, 89, 1) 100%
+        var(--secondary) 0%,
+        var(--primary) 100%
     );
     border-radius: 1000rem;
     color: #000;
@@ -193,8 +199,8 @@ body::before {
     font-weight: 600;
     background: linear-gradient(
         -90deg,
-        rgba(255, 225, 89, 1) 0%,
-        rgba(255, 189, 89, 1) 100%
+        var(--secondary) 0%,
+        var(--primary) 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -221,7 +227,7 @@ h2 {
     justify-content: center;
     height: 2.5rem;
     padding: 0;
-    background-color: #ffbd59;
+    background-color: var(--primary);
     background: linear-gradient(
         90deg,
         rgba(255, 225, 89, 1) 0%,
@@ -243,7 +249,7 @@ h2 {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0;
-    background-color: #ffbd59;
+    background-color: var(--primary);
     font-size: 1em;
     color: #000;
     font-weight: bold;
@@ -259,7 +265,7 @@ h2 {
 
 .nav-link-cur {
     text-decoration: none;
-    color: #ffbd59 !important;
+    color: var(--primary) !important;
     font-weight: bold;
     border-radius: 1000rem;
 }
@@ -292,10 +298,44 @@ h2 {
 }
 
 .home-featured-seeall:hover {
-    color: #ffbd59;
+    color: var(--primary);
     font-weight: bold;
 }
 
 p {
     margin: 1rem 0;
+}
+
+td {
+    padding: 0.3rem;
+}
+
+.project-rating {
+    background-image: linear-gradient(#000000c4);
+    border-radius: 2rem;
+    padding: 0.1rem 0.5rem;
+    text-wrap: nowrap;
+    color: var(--project-rating-color);
+    background-color: var(--project-rating-color);
+    outline: 0.0625rem solid var(--project-rating-color);
+}
+
+.project-rating.rating-N\/A {
+    --project-rating-color: #d8d8d8;
+}
+
+.project-rating.rating-E {
+    --project-rating-color: #8ef58a;
+}
+
+.project-rating.rating-7\+ {
+    --project-rating-color: #f1e683;
+}
+
+.project-rating.rating-9\+ {
+    --project-rating-color: #f39c74;
+}
+
+.project-rating.rating-13\+ {
+    --project-rating-color: #fa7a7a;
 }
