@@ -222,6 +222,11 @@ h2 {
     border-radius: 1000rem;
     margin-right: 0.375rem;
     padding: 0.5rem 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.pill-btn:hover {
+    box-shadow: 0 0px 16px 0 #ffbd59cc;
 }
 
 .home-social-btn {
@@ -238,6 +243,11 @@ h2 {
     text-decoration: none;
     border-radius: 50%;
     margin-right: 0.375rem;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.home-social-btn:hover {
+    box-shadow: 0 0px 16px 0 #ffbd59cc;
 }
 
 .nav-link {
