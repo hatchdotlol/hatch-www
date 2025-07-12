@@ -169,6 +169,14 @@ a {
     text-decoration: none;
 }
 
+#header:not(.logged-in) #nav-user {
+    display: none;
+}
+
+#header.logged-in #nav-login {
+    display: none;
+}
+
 #nav-user img {
     border-radius: 30%;
     width: 1.875rem;
