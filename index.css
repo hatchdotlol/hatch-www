@@ -105,7 +105,7 @@ a {
     text-decoration: underline;
 }
 
-:has(#nav-searchbar:focus) #nav-links {
+#header:has(#nav-searchbar:focus) #nav-links {
     opacity: 0;
     pointer-events: none;
     width: 0;
