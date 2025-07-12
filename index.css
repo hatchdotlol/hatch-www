@@ -17,7 +17,6 @@ body {
     position: relative;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-    height: 200vh;
 }
 
 body::before {
@@ -28,7 +27,7 @@ body::before {
     background-size: 1.25rem 1.25rem;
     opacity: 0.25;
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
 }
 
 #body-content {
@@ -86,7 +85,7 @@ body::before {
     opacity: 1;
     visibility: visible;
     width: 18.125rem;
-    transition: opacity 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), visibility 0.3s,
+    transition: opacity 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
         width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     overflow: hidden;
     padding: 0.5rem;
@@ -94,9 +93,13 @@ body::before {
     flex-shrink: 0;
 }
 
+#nav-links a:focus-visible {
+    outline: none;
+    text-decoration: underline;
+}
+
 :has(#nav-searchbar:focus) #nav-links {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
     width: 0;
 }
@@ -112,6 +115,11 @@ body::before {
     z-index: 0;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     pointer-events: none;
+    opacity: 1;
+}
+
+#nav-bubble.hidden {
+    opacity: 0;
 }
 
 #nav-login {
@@ -192,6 +200,10 @@ body::before {
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    font-size: 2.3em;
 }
 
 h2 {
