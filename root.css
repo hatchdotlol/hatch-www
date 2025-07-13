@@ -169,6 +169,7 @@ a {
     border-radius: 1000px;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     outline: 0.125rem solid #ffbd5944;
+    position: relative;
 }
 
 #nav-user:hover {
@@ -309,8 +310,7 @@ td {
 }
 
 #userbox {
-    position: sticky;
-    top: 5rem;
+    position: absolute;
     margin-right: auto;
     margin-left: auto;
     width: 22rem;
@@ -318,4 +318,6 @@ td {
     z-index: 100;
     background-color: #1b1b1b88;
     backdrop-filter: blur(0.625rem);
+    right: 0;
+    top: 100%;
 }
