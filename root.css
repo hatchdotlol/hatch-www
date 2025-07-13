@@ -276,3 +276,7 @@ td {
     border-radius: 0.625rem;
     border: 0.1875rem solid #1b1b1b;
 }
+
+#header:not(.logged-in) #nav-user {
+    display: none;
+}
