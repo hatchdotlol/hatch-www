@@ -1,8 +1,21 @@
 document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("header").innerHTML = await (await fetch("/components/header.html")).text();
 
-    const navLinks = document.getElementById("nav-links");
+    if (localStorage.getItem("token")) {
+        const res = await fetch("https://apiv2.hatch.lol/auth/me", {
+            headers: {
+                Token: localStorage.getItem("token")
+            }
+        });
+        if (res.ok) {
+            window.user = await res.json();
+            document.getElementById("header").classList.add("logged-in");
+            document.querySelector("#nav-user img").src = `https://apiv2.hatch.lol/uploads/pfp/${user.id}.png?size=30`;
+            document.querySelector("#nav-user span").innerText = user.displayName ?? user.username;
+        }
+    }
 
+    const navLinks = document.getElementById("nav-links");
     const bubble = document.getElementById("nav-bubble");
     const links = navLinks.querySelectorAll("a");
 
