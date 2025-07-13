@@ -34,6 +34,7 @@ body::before {
     margin-left: auto;
     margin-right: auto;
 }
+
 #header {
     position: sticky;
     top: 1.25rem;
@@ -45,7 +46,7 @@ body::before {
     max-width: 51rem;
     margin-left: auto;
     margin-right: auto;
-    height: auto;
+    height: 3rem;
     backdrop-filter: blur(0.625rem);
     justify-content: center;
     align-items: center;
@@ -305,4 +306,16 @@ td {
     gap: 2px;
     align-items: center;
     justify-content: center;
+}
+
+#userbox {
+    position: sticky;
+    top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 22rem;
+    height: 40rem;
+    z-index: 100;
+    background-color: #1b1b1b88;
+    backdrop-filter: blur(0.625rem);
 }
