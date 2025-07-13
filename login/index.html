@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>About Hatch</title>
+        <link rel="stylesheet" href="/root.css" />
         <link rel="stylesheet" href="/index.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,17 +23,23 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-      </head>
-      <body>
+    </head>
+    <body>
         <div id="header"></div>
         <div id="body-content">
-          <h1>Log In</h1>
-          <span id="error"></span>
-          <form>
-            <p><label for="username">Username</label><input type="text" id="username"></p>
-            <p><label for="password">Password</label><input type="password" id="password"></p>
-            <input type="submit" value="Submit" class="pill-btn">
-          </form>
+            <h1>Log In</h1>
+            <span id="error"></span>
+            <form>
+                <p>
+                    <label for="username">Username</label
+                    ><input type="text" id="username" />
+                </p>
+                <p>
+                    <label for="password">Password</label
+                    ><input type="password" id="password" />
+                </p>
+                <input type="submit" value="Submit" class="pill-btn" />
+            </form>
         </div>
 
         <script src="/login/page.js"></script>
