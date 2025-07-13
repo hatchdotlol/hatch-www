@@ -19,7 +19,7 @@
     right: 10%;
     width: 25rem;
     rotate: 10deg;
-    user-select: none;
+    pointer-events: none;
 }
 
 .home-social-btn {

@@ -39,7 +39,7 @@ body::before {
     position: sticky;
     top: 1.25rem;
     border-radius: 1000rem;
-    background-color: #1b1b1b88;
+    background-color: #1b1b1bcc;
     gap: 1.25rem;
     display: flex;
     width: 100%;
@@ -47,7 +47,7 @@ body::before {
     margin-left: auto;
     margin-right: auto;
     height: 3rem;
-    backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.7rem);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -310,14 +310,121 @@ td {
 }
 
 #userbox {
-    position: absolute;
-    margin-right: auto;
+    display: block;
+    width: 51rem;
     margin-left: auto;
-    width: 22rem;
-    height: 40rem;
+    margin-right: auto;
+    position: sticky;
+    top: 5.5rem;
+    height: fit-content;
+    padding-left: 29rem;
     z-index: 100;
-    background-color: #1b1b1b88;
-    backdrop-filter: blur(0.625rem);
-    right: 0;
-    top: 100%;
+    pointer-events: none;
+}
+
+#userbox-inner {
+    pointer-events: all;
+    position: absolute;
+    width: auto;
+    height: inherit;
+    background-color: #1b1b1bcc;
+    backdrop-filter: blur(0.7rem);
+    border-radius: 1.5rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#userbox-inner > p,
+#ub-name,
+#ub-notifs-top,
+.ub-notif-alert > p,
+.ub-notif-comment-inside > p {
+    margin: 0;
+}
+
+#ub-name,
+#ub-notifs-top {
+    text-align: center;
+}
+
+#ub-notifs-top {
+    color: #8a8a8a;
+}
+
+#ub-notifs {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ub-notif {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+    background-color: #36363655;
+    backdrop-filter: blur(0.7rem);
+}
+
+.ub-notif-alert {
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+    background-color: #c9131355 !important;
+    border: 2px solid #c91313 !important;
+}
+
+.notif-alert-dismiss {
+    background-color: #2b2b2b00;
+    color: #fff;
+    border: 2px solid #c91313;
+    border-radius: 10000px;
+    width: fit-content;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.notif-alert-top {
+    font-weight: bold;
+}
+
+.ub-notif-comment-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.ub-notif-comment > img {
+    margin-top: 0.2rem;
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+}
+
+.ub-notif-short {
+    align-items: center;
+}
+
+.ub-notif-short > p {
+    margin: 0;
+}
+
+#ub-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ub-links > * {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+#ub-links > *:hover {
+    transform: scale(1.23);
 }
