@@ -240,3 +240,30 @@ input:where([type="text"], [type="password"], [type="email"]) {
 .why-disclaimer span {
     font-weight: bold;
 }
+
+.home-news-story {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 20rem;
+    height: 20rem;
+    padding: 0.6rem;
+    background-color: #14141488;
+}
+
+.home-news-story > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.home-news-story > p,
+.home-news-story > h3 {
+    margin: 0;
+}
+
+.home-news-story > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: inherit;
+    height: 5rem;
+}
