@@ -74,6 +74,8 @@ a {
     font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
     color: var(--primary);
     font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #nav-links {
