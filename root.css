@@ -70,7 +70,7 @@ a {
     height: 2.7rem;
 }
 
-.nav-logo p {
+.nav-logo a {
     font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
     color: var(--primary);
     font-size: 1.8em;
