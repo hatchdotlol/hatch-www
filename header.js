@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ).text();
 
     if (localStorage.getItem("token")) {
-        const res = await fetch("https://apiv2.hatch.lol/auth/me", {
+        const res = await fetch("https://api.hatch.lol/auth/me", {
             headers: {
                 Token: localStorage.getItem("token"),
             },
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("header").classList.add("logged-in");
             document.querySelector(
                 "#nav-user img"
-            ).src = `https://apiv2.hatch.lol/users/${user.name}/pfp`;
+            ).src = `https://api.hatch.lol/users/${user.name}/pfp`;
             // document.querySelector("#nav-user span").innerText = user.displayName ?? user.username;
             // it's supposed to say notification count :bruhidle:
         }
