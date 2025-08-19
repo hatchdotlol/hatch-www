@@ -294,12 +294,18 @@ td {
     border: 0.1875rem solid #1b1b1b;
 }
 
-#header:not(.logged-in) #nav-user {
+#header.logged-out #nav-user {
     display: none;
+}
+#header.logged-out #nav-login {
+    display: flex;
 }
 
 #header.logged-in #nav-login {
     display: none;
+}
+#header.logged-in #nav-user {
+    display: flex;
 }
 
 .h-notifs {

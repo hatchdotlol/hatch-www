@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (localStorage.getItem("token")) {
+        document.getElementById("header").classList.add("logged-in");
         const res = await fetch("https://api.hatch.lol/auth/me", {
             headers: {
                 Token: localStorage.getItem("token"),
@@ -17,13 +18,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
         if (res.ok) {
             window.user = await res.json();
-            document.getElementById("header").classList.add("logged-in");
             document.querySelector(
                 "#nav-user img"
             ).src = `https://api.hatch.lol/users/${user.name}/pfp`;
+
             // document.querySelector("#nav-user span").innerText = user.displayName ?? user.username;
             // it's supposed to say notification count :bruhidle:
         }
+    } else {
+        document.getElementById("header").classList.add("logged-out");
     }
 
     const userbox = document.getElementById("userbox");
