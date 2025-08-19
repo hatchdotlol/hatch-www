@@ -2,9 +2,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("header").innerHTML = await (
         await fetch("/components/header.html")
     ).text();
-    document.getElementById("userbox").innerHTML = await (
-        await fetch("/components/userbox.html")
-    ).text();
+    let userboxExcludedPaths = ["/login"];
+    if (!userboxExcludedPaths.includes(window.location.pathname)) {
+        document.getElementById("userbox").innerHTML = await (
+            await fetch("/components/userbox.html")
+        ).text();
+    }
 
     if (localStorage.getItem("token")) {
         const res = await fetch("https://api.hatch.lol/auth/me", {

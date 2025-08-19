@@ -87,12 +87,11 @@ a {
     gap: 1rem;
     opacity: 1;
     visibility: visible;
-    width: 18.125rem;
+    width: 23rem;
     transition: opacity 0.3s cubic-bezier(0.4, 0.2, 0.2, 1),
         width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     overflow: hidden;
     padding: 0.5rem;
-    width: fit-content;
     flex-shrink: 0;
 }
 
@@ -194,7 +193,7 @@ a {
     outline: 0.125rem solid #ffbd5944;
     border-radius: 1000rem;
     color: #fff;
-    transition: width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 #big-header span {
