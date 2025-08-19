@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   
-    const resp = await fetch("https://apiv2.hatch.lol/auth/login", {
+    const resp = await fetch("https://api.hatch.lol/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
