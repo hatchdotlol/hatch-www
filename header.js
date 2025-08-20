@@ -1,8 +1,4 @@
-
-
 // get everything and assemble it into the navbar (minus the user)
-
-
 document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("header").innerHTML = await (
         await fetch("/components/header.html")
@@ -13,11 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             await fetch("/components/userbox.html")
         ).text();
     }
-
-    
-// get the user stuff if logged in and add it in
-
-    
+    // get the user stuff if logged in and add it in
     if (localStorage.getItem("token")) {
         document.getElementById("header").classList.add("logged-in");
         const res = await fetch("https://api.hatch.lol/auth/me", {
@@ -32,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             ).src = `https://api.hatch.lol/users/${user.name}/pfp`;
 
             // document.querySelector("#nav-user span").innerText = user.displayName ?? user.username;
-            // it's supposed to say notification count :bruhidle:
+            // it's supposed to say notification count :bruhidle: dont make it the username
         }
     } else {
         document.getElementById("header").classList.add("logged-out");
@@ -46,11 +38,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             userbox.style.display = "block";
         }
     });
-    
-    
-// this stuff controls the selection bubble in the navbar
 
-    
+    // this stuff controls the selection bubble in the navbar
     const navLinks = document.getElementById("nav-links");
     const bubble = document.getElementById("nav-bubble");
     const links = navLinks.querySelectorAll("a");
@@ -64,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         bubble.style.left = rect.left - parentRect.left - 8 + "px";
         bubble.style.top = rect.top - parentRect.top - 4 + "px";
     }
-
     links.forEach((link) => {
         if (
             link.href === location.href ||
