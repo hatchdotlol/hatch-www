@@ -1,14 +1,23 @@
 :root {
     --block1: #1b1b1b;
-    --links: #877eff;
+    --bodyText: #fff;
+    --links: #2196f3;
     --primary: #ffbd59;
     --secondary: #ffe159;
     color-scheme: dark;
+
+    --bgGradient: radial-gradient(circle at top left, #42331b 00%, #000 45%);
+    --bgDots: radial-gradient(#7a7a7a 0.0625rem, transparent 0.0625rem);
+
+    /* header specific colors */
+    --headerBack: #1b1b1bcc;
+    --navBubble: #dddddd33; /* the floaty bubble thing over nav links */
+    --navLogin: #ffbd5944; /* used for outline around log in button in nav and search bar and other stuff */
 }
 body {
-    background: radial-gradient(circle at top left, #42331b 00%, #000 45%);
+    background: var(--bgGradient);
     font-family: "Outfit", sans-serif;
-    color: #fff;
+    color: var(--bodyText);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -21,12 +30,13 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(#7a7a7a 0.0625rem, transparent 0.0625rem);
+    background-image: var(--bgDots);
     background-size: 1.25rem 1.25rem;
     opacity: 0.25;
     pointer-events: none;
     z-index: -1;
 }
+
 #body-content {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
@@ -39,7 +49,7 @@ body::before {
     position: sticky;
     top: 1.25rem;
     border-radius: 1000rem;
-    background-color: #1b1b1bcc;
+    background-color: var(--headerBack);
     gap: 1.25rem;
     display: flex;
     width: 100%;
@@ -112,7 +122,7 @@ a {
     left: 0;
     width: 0;
     height: 0;
-    background-color: #dddddd33;
+    background-color: var(--navBubble);
     border-radius: 1000rem;
     z-index: 0;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -128,7 +138,7 @@ a {
     height: 2.4em;
     display: flex;
     border-radius: 1000rem;
-    outline: 0.125rem solid #ffbd5944;
+    outline: 0.125rem solid var(--navLogin);
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
@@ -169,7 +179,7 @@ a {
     padding-left: 0.4rem;
     border-radius: 1000px;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-    outline: 0.125rem solid #ffbd5944;
+    outline: 0.125rem solid var(--navLogin);
     position: relative;
 }
 
@@ -190,7 +200,7 @@ a {
     height: 100%;
     padding: 0.5rem 0.75rem;
     background-color: #1b1b1b55;
-    outline: 0.125rem solid #ffbd5944;
+    outline: 0.125rem solid var(--navLogin);
     border-radius: 1000rem;
     color: #fff;
     transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -434,4 +444,9 @@ td {
 
 #ub-links > *:hover {
     transform: scale(1.23);
+}
+
+a {
+    color: #2196f3;
+    text-decoration: underline;
 }
