@@ -1,3 +1,8 @@
+
+
+// get everything and assemble it into the navbar (minus the user)
+
+
 document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("header").innerHTML = await (
         await fetch("/components/header.html")
@@ -9,6 +14,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         ).text();
     }
 
+    
+// get the user stuff if logged in and add it in
+
+    
     if (localStorage.getItem("token")) {
         document.getElementById("header").classList.add("logged-in");
         const res = await fetch("https://api.hatch.lol/auth/me", {
@@ -37,7 +46,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             userbox.style.display = "block";
         }
     });
+    
+    
+// this stuff controls the selection bubble in the navbar
 
+    
     const navLinks = document.getElementById("nav-links");
     const bubble = document.getElementById("nav-bubble");
     const links = navLinks.querySelectorAll("a");
