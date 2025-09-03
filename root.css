@@ -22,7 +22,6 @@ body {
     overflow-x: hidden;
     position: relative;
     padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
     margin: 0;
 }
 
@@ -461,6 +460,7 @@ td {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    background-image: linear-gradient(0deg, #ffbd5955 0%, rgba(0, 0, 0, 0) 60%);
 }
 
 .foot-top {
@@ -508,4 +508,12 @@ td {
 
 .foot-link-cat a:hover {
     border-bottom: 2px solid #ffbd59;
+}
+
+.foot-copyright {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(0deg, #ffbd59 0%, rgba(0, 0, 0, 0) 20%);
 }
