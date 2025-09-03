@@ -67,6 +67,7 @@ body::before {
 
 a {
     color: var(--links);
+    text-decoration: underline;
 }
 
 .nav-logo {
@@ -304,6 +305,10 @@ td {
     border: 0.1875rem solid #1b1b1b;
 }
 
+/*end scrollbar styles
+    begin header styles
+*/
+
 #header.logged-out #nav-user {
     display: none;
 }
@@ -446,7 +451,61 @@ td {
     transform: scale(1.23);
 }
 
-a {
-    color: #2196f3;
-    text-decoration: underline;
+/*footer!*/
+
+#foot {
+    margin-top: 10rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.foot-top {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: 2.5rem;
+}
+
+.foot-top img {
+    height: 5rem;
+}
+
+.foot-top a {
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.foot-links {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.foot-link-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-link-cat h4 {
+    margin: 0.35rem 0;
+    font-size: 1.2rem;
+}
+
+.foot-link-cat a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 2px solid #ffbd5900;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.foot-link-cat a:hover {
+    border-bottom: 2px solid #ffbd59;
 }
