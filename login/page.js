@@ -26,12 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }),
     });
   
-    const json = await resp.json();
-  
-    if (json.message) {
+    if (resp.status === 400 || resp.status === 500) {
       username.disabled = false;
       password.disabled = false;
-      document.getElementById("error").innerText = json.message;
+      document.getElementById("error").innerText = await resp.text();
       return;
     }
   
