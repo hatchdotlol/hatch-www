@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
         document.getElementById("header").classList.add("logged-out");
     }
-
+    //userbox
     const userbox = document.getElementById("userbox");
     document.getElementById("nav-user").addEventListener("click", () => {
         if (userbox.style.display == "block") {

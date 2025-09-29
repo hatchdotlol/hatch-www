@@ -510,6 +510,17 @@ td {
     border-bottom: 2px solid #ffbd59;
 }
 
+.foot-social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+.foot-social a {
+    color: var(--primary);
+}
+
 .foot-copyright {
     width: 100%;
     align-items: center;
