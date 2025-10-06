@@ -66,7 +66,7 @@
     },
     {
       name: "Salad",
-      description: "My name is Salad. I made the Salad. It was difficult, to put the Salads together.",
+      description: "My name is Salad, TrioSALAD for long, or 7s3s for short. I like to play various games, and I despise New Jersey. They call me a Developer but I don't know how to code. Life is rad.",
       position: "Developer, Moderator",
       avatar: "https://uploads.scratch.mit.edu/get_image/user/70588619_500x500.png",
       scratch: "7salad3salad",
