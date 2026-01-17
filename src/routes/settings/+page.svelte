@@ -14,7 +14,7 @@
 </script>
 
 {#if currentUser}
-  <h1>Settings</h1>
+  <h1 style="margin-bottom:0.5rem;">Settings</h1>
   <div class="settingspanel">
     <h4>Your Profile</h4>
 
