@@ -1132,7 +1132,7 @@
     background-image: linear-gradient(0deg, #ffbd59 0%, rgba(0, 0, 0, 0) 20%);
   }
 
-  :global(input:where([type="text"], [type="password"], [type="email"]),select) {
+  :global(input:where([type="text"], [type="password"], [type="email"]), select) {
     font: inherit;
     border: none;
     border-radius: 2rem;
@@ -1140,8 +1140,6 @@
     background-color: var(--block1);
     padding: 0.5rem 0.75rem;
   }
-
-
 
   :global(.pfp) {
     border-radius: 30%;
