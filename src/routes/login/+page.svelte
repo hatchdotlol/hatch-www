@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { page } from "$app/state";
+
   let error = $state("");
 
   let username = $state("");
@@ -56,7 +58,12 @@
       }
 
       localStorage.setItem("token", (await resp.json()).token);
-      window.location.href = "/";
+      const redirect = page.url.searchParams.get("redirect");
+      if (redirect) {
+        window.location.pathname = redirect;
+      } else {
+        window.location.pathname = "/";
+      }
     }}
   >
     <p>
