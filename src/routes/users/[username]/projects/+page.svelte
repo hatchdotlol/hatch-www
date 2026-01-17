@@ -53,18 +53,6 @@
     justify-content: center;
     gap: 0.5rem;
   }
-  .fbox-link {
-    padding: 0.5rem;
-    border-radius: 10000px;
-    background-color: var(--block2);
-    box-sizing: border-box;
-    text-decoration: none;
-    color: var(--bodyText);
-  }
-  .fbox-link.cur {
-    color: var(--primary) !important;
-    font-weight: bold;
-  }
   @media (max-width: 768px) {
     .grid {
       grid-template-columns: repeat(auto-fill, 5rem);
