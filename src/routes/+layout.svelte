@@ -74,7 +74,7 @@
     <a class="nav-link" href="/">Home</a>
     <a class="nav-link" href="/explore">Explore</a>
     <a class="nav-link" href="/about">About</a>
-    <a class="nav-link" href="https://hatch.raynec.dev">Editor</a>
+    <a class="nav-link" href="https://hatch.rayne.page">Editor</a>
     <a class="nav-link" href="https://wiki.hatch.lol">Wiki</a>
     <a class="nav-link" href="https://forums.hatch.lol">Forums</a>
   </div>
@@ -233,7 +233,7 @@
           <i class="fa-solid fa-user"></i>
         </a>
         <a
-          href="/"
+          href="/settings"
           aria-label="Settings"
           class="ub-settings"
           onclick={() => {
@@ -1132,7 +1132,7 @@
     background-image: linear-gradient(0deg, #ffbd59 0%, rgba(0, 0, 0, 0) 20%);
   }
 
-  :global(input:where([type="text"], [type="password"], [type="email"])) {
+  :global(input:where([type="text"], [type="password"], [type="email"]),select) {
     font: inherit;
     border: none;
     border-radius: 2rem;
@@ -1140,6 +1140,8 @@
     background-color: var(--block1);
     padding: 0.5rem 0.75rem;
   }
+
+
 
   :global(.pfp) {
     border-radius: 30%;
