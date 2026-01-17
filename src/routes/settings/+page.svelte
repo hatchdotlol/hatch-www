@@ -21,6 +21,7 @@
     <div class="split-in-half">
       <div class="settingspanel" style="height: 196px;">
         <img
+          style="border-radius:0.8rem;"
           src="https://api.hatch.lol/users/{currentUser.name}/pfp"
           alt="your profile icon"
           height="128px"
@@ -332,7 +333,7 @@
       placeholder="Banner URL"
       value={currentUser.bannerImage}
     />
-    <img src={currentUser.bannerImage} alt="your profile icon" height="128px" />
+    <img src={currentUser.bannerImage} id="banner" alt="your profile icon" height="128px" />
   </div>
   <div class="settingspanel">
     <h4>Email</h4>
@@ -355,6 +356,16 @@
 {/if}
 
 <style>
+  #banner {
+    width: 100%;
+    height: 180.45px;
+    aspect-ratio: 9 / 2;
+    border-radius: 0.8rem;
+    display: block;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+  }
   .split-in-half {
     display: flex;
     gap: 1rem;
