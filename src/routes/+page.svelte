@@ -29,7 +29,7 @@
       name: "Project Name",
       upvotes: 90
     },
-        {
+    {
       author: "hatch",
       downvotes: 10,
       id: 1,
@@ -43,7 +43,7 @@
       name: "Project Name",
       upvotes: 90
     },
-        {
+    {
       author: "hatch",
       downvotes: 10,
       id: 1,
@@ -147,6 +147,7 @@
 </div>
 
 <div class="project-row">
+  <p class="hideselectedtext">&ensp;&ensp;</p>
   {#each projects as project}
     <Project
       author={project.author}
@@ -156,6 +157,7 @@
       upvotes={project.upvotes}
     />
   {/each}
+  <p>&ensp;&ensp;</p>
 </div>
 {#if !currentUser}
   <h2>Why join Hatch?</h2>
@@ -233,6 +235,12 @@
 </div>
 
 <style>
+  .hideselectedtext::selection {
+    background-color: #0000;
+  }
+  .hideselectedtext {
+    user-select: none;
+  }
   #big-header span {
     font-weight: 800;
     background: linear-gradient(-90deg, var(--secondary) 0%, var(--primary) 100%);

@@ -7,6 +7,12 @@
   let password = $state("");
 
   let thinking = $state(false);
+        const redirect = page.url.searchParams.get("redirect");
+      if (redirect) {
+        window.location.pathname = redirect;
+      } else {
+        window.location.pathname = "/";
+      }
 </script>
 
 <svelte:head>
