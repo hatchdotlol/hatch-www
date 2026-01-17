@@ -37,17 +37,9 @@
       username: "ElizaDoesStuff"
     },
     {
-      name: "Han",
-      description: "yab member, forumer, coder",
-      position: "Frontend, Moderator",
-      avatar: "https://avatars.githubusercontent.com/u/188119532",
-      scratch: "han614698",
-      username: "han"
-    },
-    {
       name: "Kat",
       description:
-        "I started out with programming in Scratch, then went on to start working in HTML/CSS (No JS) and Godot.",
+        "I'm a transfem menace to society who codes...adequately. I like to read books and play video games in my free time (Half-Life 2 and Geometry Dash recently as of writing).",
       position: "Frontend",
       avatar: "https://avatars.githubusercontent.com/u/100965627",
       scratch: "Autofirejm",
@@ -56,7 +48,7 @@
     {
       name: "Kiwi",
       description: "Male, teenager, BOXBOY WIKI! admin, and proud Antarctica Citizen.",
-      position: "Proofreading, Waffle Distribution",
+      position: "PR, Moderator",
       avatar: "https://boxboy.wiki/mw/images/thumb/0/05/Kiwi_logo.png/400px-Kiwi_logo.png",
       scratch: "minikiwigeek2",
       username: "kiwi"
@@ -134,6 +126,14 @@
       avatar: "https://api.wasteof.money/users/94/picture",
       scratch: "fungifungus",
       username: "f"
+    },
+    {
+      name: "Han",
+      description: "yab member, forumer, coder",
+      position: "Former Moderator",
+      avatar: "https://avatars.githubusercontent.com/u/188119532",
+      scratch: "han614698",
+      username: "han"
     },
     {
       name: "Jeffalo",
