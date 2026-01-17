@@ -1,20 +1,19 @@
 <script lang="ts">
   import UserCard from "$lib/components/UserCard.svelte";
   const { data } = $props();
-  console.log(data); //delete me once the page is made
 </script>
 
 <svelte:head>
-  <title>Followers - Hatch</title>
+  <title>{data.user.displayName}'s followers - Hatch</title>
 </svelte:head>
 
 <main>
   <h1>{data.user.displayName}'s followers</h1>
   <div id="fbox">
     <div id="fbox-top">
+      <a href="/users/{data.user.name}" class="fbox-link">Back</a>
       <a href="/users/{data.user.name}/followers" class="fbox-link cur">Followers</a>
       <a href="/users/{data.user.name}/following" class="fbox-link">Following</a>
-      <a href="/users/{data.user.name}/mutuals" class="fbox-link">Mutuals</a>
     </div>
     <div id="fbox-bottom">
       <div class="grid">
