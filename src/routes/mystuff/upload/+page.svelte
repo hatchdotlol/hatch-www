@@ -6,7 +6,7 @@
 {#if currentUser}
   <h1 style="margin-bottom:0.5rem;">Upload a new project</h1>
   <div class="settingspanel">
-    <input type="file" accept=", .sb, .sb2, .sb3">
+    <input type="file" accept=", .sb, .sb2, .sb3" style="font-family: 'Outfit', sans-serif;" />
   </div>
   <div class="settingspanel">
     <h4>Project Details</h4>
@@ -90,7 +90,7 @@
     background-image: var(--themeGradient);
     font-size: 1em;
     color: #000;
-    font: inherit;
+    font-family: "outfit", sans-serif;
     border: none;
     font-weight: bold;
     text-decoration: none;
