@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ColorPicker, { ChromeVariant } from "svelte-awesome-color-picker";
   import { onMount } from "svelte";
 
   onMount(() => {
@@ -8,9 +9,10 @@
       window.location.pathname = "/login?redirect=/settings";
     }
   });
-
   let { data } = $props();
   let currentUser = $state(data.user);
+  let hex = $state("#ffbd59");
+  if (currentUser) { hex = currentUser.theme; }
 </script>
 
 {#if currentUser}
@@ -304,6 +306,12 @@
   </div>
 
   <div class="settingspanel">
+    <h4>Theme</h4>
+    <p>Hatch doesn't offer light/dark mode. Instead, we have accent colours.</p>
+    <div class="colorpicker"><ColorPicker  bind:hex isDialog={false} textInputModes={["hex"]} isAlpha={false}/></div>
+  </div>
+
+  <div class="settingspanel">
     <h4>Name</h4>
     <p>
       <b>Your username is @{currentUser.name}.</b> You cannot change your username unless there's a problem
@@ -356,6 +364,13 @@
 {/if}
 
 <style>
+  .colorpicker {
+    --cp-bg-color: #333;
+    --cp-border-color: var(--primary);
+    --cp-text-color: var(--primary);
+    --cp-input-color: #555;
+    --cp-button-hover-color: #777;
+  }
   #banner {
     width: 100%;
     height: 180.45px;

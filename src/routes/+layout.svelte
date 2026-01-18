@@ -3,6 +3,7 @@
   import favicon from "$lib/assets/favicon.svg";
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
+  import ColorPicker from "svelte-awesome-color-picker";
   import "@fortawesome/fontawesome-free/css/all.min.css";
 
   let { children, data } = $props();
