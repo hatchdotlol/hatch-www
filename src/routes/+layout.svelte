@@ -74,7 +74,6 @@
     <a class="nav-link" href="/">Home</a>
     <a class="nav-link" href="/explore">Explore</a>
     <a class="nav-link" href="/about">About</a>
-    <a class="nav-link" href="https://hatch.rayne.page">Editor</a>
     <a class="nav-link" href="https://wiki.hatch.lol">Wiki</a>
     <a class="nav-link" href="https://forums.hatch.lol">Forums</a>
   </div>
