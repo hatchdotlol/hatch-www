@@ -1209,6 +1209,8 @@
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--block1);
   }
 
   @media (max-width: 768px) {
