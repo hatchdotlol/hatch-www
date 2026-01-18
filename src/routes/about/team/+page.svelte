@@ -63,8 +63,7 @@
     },
     {
       name: "Rayne",
-      description:
-        "i'm a teenage software engineer and high school sophomore :]",
+      description: "i'm a teenage software engineer and high school sophomore :]",
       position: "Frontend, Forums",
       avatar: "https://avatars.githubusercontent.com/u/129226914",
       scratch: "breakfast_for_dinner",

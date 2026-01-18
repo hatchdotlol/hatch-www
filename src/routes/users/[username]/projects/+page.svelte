@@ -10,8 +10,7 @@
 <main>
   <h1>{data.user.displayName}'s projects</h1>
   <div id="fbox">
-    <div id="fbox-top">
-    </div>
+    <div id="fbox-top"></div>
     <div id="fbox-bottom">
       <div class="grid">
         {#each data.projects as project}

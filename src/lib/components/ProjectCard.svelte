@@ -46,7 +46,7 @@
       <button><i class="fa-solid fa-eye"></i> Share</button>
     {/if}
     <button><i class="fa-solid fa-download"></i> Download</button>
-    <button  id="delete"><i class="fa-solid fa-trash"></i> Delete</button>
+    <button id="delete"><i class="fa-solid fa-trash"></i> Delete</button>
   </div>
 </a>
 
@@ -67,7 +67,7 @@
     margin-top: 0.25rem;
     float: right;
     width: 20%;
-    color:#ccc;
+    color: #ccc;
     font-size: 0.8em;
   }
   .actions button {

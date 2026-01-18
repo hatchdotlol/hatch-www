@@ -1,9 +1,9 @@
 {
-	"name": "hatch-www",
-	"main": ".svelte-kit/cloudflare/_worker.js",
-	"compatibility_date": "2025-07-28",
-	"assets": {
-		"binding": "ASSETS",
-		"directory": ".svelte-kit/cloudflare"
-	}
+  "name": "hatch-www",
+  "main": ".svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-07-28",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".svelte-kit/cloudflare"
+  }
 }

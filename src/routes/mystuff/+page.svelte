@@ -13,10 +13,15 @@
     <h1>Your Projects</h1>
     <div id="fbox">
       <div id="fbox-top">
-       You have {currentUser.projectCount} projects.    <div style="font-size: 0.6rem; margin-top: 0.4rem;">{#if currentUser.projectCount === 0}...how depressing.{/if}</div>
+        You have {currentUser.projectCount} projects.
+        <div style="font-size: 0.6rem; margin-top: 0.4rem;">
+          {#if currentUser.projectCount === 0}...how depressing.{/if}
+        </div>
       </div>
       <div id="fbox-bottom">
-        <a href="mystuff/upload" class="pill-btn" style="width:100%"><i class="fa-solid fa-upload"></i>&ensp;Upload new project</a>
+        <a href="mystuff/upload" class="pill-btn" style="width:100%"
+          ><i class="fa-solid fa-upload"></i>&ensp;Upload new project</a
+        >
         <div class="grid" style="margin-top:1rem;">
           {#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as i}
             <ProjectCard

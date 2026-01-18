@@ -35,13 +35,13 @@ export type User = {
   displayName: string;
   country: string;
   bio: string;
-  highlightedProjects: Project[],
+  highlightedProjects: Project[];
   joinDate: string;
   bannerImage: string;
   followerCount: number;
   followingCount: number;
   theme: string;
   projectCount: number;
-  hatchTeam: boolean,
-  verified: boolean
+  hatchTeam: boolean;
+  verified: boolean;
 };
