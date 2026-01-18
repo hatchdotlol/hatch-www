@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Project from "$lib/components/Project.svelte";
-  import { error } from "@sveltejs/kit";
+  import ProjectCard from "$lib/components/ProjectCard.svelte";
   const { data } = $props();
   let currentUser = $state(data.user);
 </script>
@@ -13,18 +12,23 @@
   {#if currentUser}
     <h1>Your's projects</h1>
     <div id="fbox">
-      <div id="fbox-top"></div>
+      <div id="fbox-top">
+       You have {currentUser.projectCount} projects.    <div style="font-size: 0.6rem; margin-top: 0.4rem;">{#if currentUser.projectCount === 0}...how depressing.{/if}</div>
+      </div>
       <div id="fbox-bottom">
-        <div class="grid">
-         {#each [1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10] as i}
-          <Project
-            author={currentUser.name}
-            downvotes={0}
-            id={0}
-            name={"Example Project"}
-            upvotes={0}
-          />
-        {/each}
+        <a href="https://hatch.rayne.page/" class="pill-btn"><i class="fa-solid fa-plus"></i>&ensp;Create new project</a>
+        <a href="mystuff/upload" class="pill-btn"><i class="fa-solid fa-upload"></i>&ensp;Upload new project</a>
+        <div class="grid" style="margin-top:1rem;">
+          {#each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as i}
+            <ProjectCard
+              author={""}
+              downvotes={0}
+              id={i}
+              name={"Example Project"}
+              upvotes={0}
+              shared={i % 2 === 0}
+            />
+          {/each}
         </div>
       </div>
     </div>
@@ -47,9 +51,10 @@
     gap: 1rem;
   }
   .grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem 6rem;
-    grid-template-columns: repeat(auto-fill, 6rem);
     justify-content: start;
   }
   #fbox-top {
