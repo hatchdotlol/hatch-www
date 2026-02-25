@@ -13,7 +13,7 @@
       name: "Jabin",
       description:
         "I make cool things for fun! I mostly do stuff on the front end, like websites and clients for stuff, but I also make Discord bots and do some media stuff like video editing.",
-      position: "CEO, Frontend",
+      position: "Founder, Frontend",
       avatar: "https://avatars.githubusercontent.com/u/118082374",
       scratch: "-gr",
       username: "-gr"
