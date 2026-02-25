@@ -21,7 +21,7 @@
     {
       name: "AJ",
       description:
-        "I like brainstorming interesting ideas, and some of them stick and become a thing.",
+        "i run the hatch api",
       position: "Backend",
       avatar: "https://avatars.githubusercontent.com/u/81255936",
       scratch: "ajskateboarder",
