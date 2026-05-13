@@ -1,3 +1,6 @@
+> [!NOTE]
+> Hatch development is paused until further notice. Join our Discord if you want more information. If development resumes, this repository will be unarchived.
+
 # Hatch-www
 
 Hatch-www is the main repository for Hatch's frontend web interface. You can access the latest deployment at [hatch.lol](https://hatch.lol/). It is deployed automatically via Cloudflare Workers.
